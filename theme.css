@@ -1,0 +1,66 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.searchBar {
+  width: 70%;
+  outline: 1px solid rgb(220, 53, 69);
+  border-radius: 10px;
+  padding: 4px;
+  display: flex;
+}
+
+.searchBar input {
+  outline: none;
+  border: none;
+  padding: 2px 5px;
+  width: 93%;
+}
+
+.searchBar button {
+  width: 7%;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0px 5px;
+  color: rgb(220, 53, 69);
+  background-color: white;
+}
+
+.category-card {
+  transition: background-color 0.5s ease, transform 0.5s ease,
+    box-shadow 0.5s ease;
+  transform: translateY(0);
+  border-radius: 12px;
+  box-shadow: 0 0 3px gray;
+}
+
+.category-card:hover {
+  color: rgb(220, 53, 69) !important;
+  border-radius: 10px;
+  transform: translateY(-5px);
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.product-card {
+  transition: background-color 0.5s ease, transform 0.5s ease,
+    box-shadow 0.5s ease;
+  transform: translateY(0);
+  border-radius: 12px;
+  background-color: aliceblue;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.category-card,
+.product-card {
+  cursor: pointer;
+}
