@@ -4,11 +4,12 @@
 }
 
 .searchBar {
-  width: 70%;
+  width: 65%;
   outline: 1px solid rgb(220, 53, 69);
   border-radius: 10px;
   padding: 4px;
   display: flex;
+  margin-right: 1.4rem;
 }
 
 .searchBar input {
@@ -29,12 +30,35 @@
   background-color: white;
 }
 
+.mylogo i {
+  font-size: 24px;
+}
+
+.mylogo span {
+  font-size: 23px;
+}
+
+.profil {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  outline: none;
+  border: none;
+
+  border: 1px solid rgb(220, 53, 69);
+}
+
+.profil i {
+  font-size: 19px;
+}
+
 .category-card {
   transition: background-color 0.5s ease, transform 0.5s ease,
     box-shadow 0.5s ease;
   transform: translateY(0);
   border-radius: 12px;
-  box-shadow: 0 0 3px gray;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .category-card:hover {
@@ -53,11 +77,13 @@
     box-shadow 0.5s ease;
   transform: translateY(0);
   border-radius: 12px;
-  background-color: aliceblue;
+  background-color: #f8faff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .category-card,

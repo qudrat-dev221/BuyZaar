@@ -20,6 +20,23 @@
   .apna {
     display: none;
   }
+  .mylogo i {
+    font-size: 17px;
+  }
+
+  .mylogo span {
+    font-size: 17px;
+  }
 }
 
-/* Desktops (768px and above) */
+@media (min-width: 300px) and (max-width: 768px) {
+  .searchBar {
+    width: 80%;
+    outline: 1px solid rgb(220, 53, 69);
+    border-radius: 10px;
+    padding: 4px;
+    display: flex;
+    margin-right: 1.4rem;
+    margin: 0px auto;
+  }
+}
