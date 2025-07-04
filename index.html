@@ -69,21 +69,23 @@
                 <i class="fas fa-home me-2 text-danger"></i>Home
               </button>
 
-              <button
+              <a
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="electronics"
                 data-name="electronics"
+                href="./Category Pages/electronic.html"
               >
                 <i class="fas fa-mobile-alt me-2 text-danger"></i>Electronics
-              </button>
+              </a>
 
-              <button
+              <a
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="clothing"
                 data-name="clothing"
+                href="./Category Pages/cloth.html"
               >
                 <i class="fas fa-tshirt me-2 text-danger"></i>Clothing
-              </button>
+              </a>
 
               <button
                 class="routingButton dropdown-item d-flex align-items-center"
@@ -143,12 +145,12 @@
             <i class="fa-solid fa-user text-danger"></i>
           </button>
 
-          <a
-            href="cart.html"
+          <button
+          id="cartButton"
             class="btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center ms-lg-3"
           >
             <i class="fas fa-shopping-cart me-2"></i> Cart
-          </a>
+          </button>
         </div>
       </div>
     </header>
@@ -344,6 +346,71 @@
       </div>
     </div>
     <!-- HERO CAROUSEL END -->
+     <!-- cart start -->
+     <div class="cart-container">
+      <h4 class="cart-title">Shopping Cart</h4>
+
+      <!-- First Item -->
+      <div class="cart-item">
+        <div class="product-col">
+          <img
+            src="./Images/Best Sellers/Bluetooth Headset.png"
+            class="product-img"
+            alt="Sunglasses"
+          />
+          <strong>Original Sunglasses</strong>
+        </div>
+
+        <div class="qty-col">
+          <div class="d-flex align-items-center">
+            <button class="btn quantity-btn mycart">-</button>
+            <span class="mx-2">1</span>
+            <button class="btn quantity-btn mycart">+</button>
+          </div>
+        </div>
+        <div class="total-col"><strong>Rs. 333</strong></div>
+        <div class="delete-col">
+          <button class="btn btn-danger btn-sm">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Item -->
+      <div class="cart-item">
+        <div class="product-col">
+          <img
+            src="./Images/Best Sellers/Bluetooth Headset.png"
+            class="product-img"
+            alt="Headphones"
+          />
+          <strong>Wireless Headphones</strong>
+        </div>
+
+        <div class="qty-col">
+          <div class="d-flex align-items-center">
+            <button class="btn quantity-btn mycart">-</button>
+            <span class="mx-2">2</span>
+            <button class="btn quantity-btn mycart">+</button>
+          </div>
+        </div>
+        <div class="total-col"><strong>Rs. 1998</strong></div>
+        <div class="delete-col">
+          <button class="btn btn-danger btn-sm">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="cart-footer">
+        <h5 class="m-0">
+          Grand Total: <span class="text-danger">Rs. 2331</span>
+        </h5>
+        <button class="btn proceed-btn">PROCEED</button>
+      </div>
+    </div>
+     <!-- cart end -->
 
     <!-- CATEGORIES SECTION START -->
     <div class="container-fluid bg-light py-5">
@@ -595,7 +662,7 @@
                 >HOT</span
               >
               <img
-                src="./Images/Home/Hot Deals/smartphone.png"
+                src="./Images/Hot Deals/Premium Smartphone X1.png"
                 class="card-img-top"
                 alt="Premium Smartphone"
                 style="height: 250px"
@@ -623,7 +690,7 @@
                 >HOT</span
               >
               <img
-                src="./Images/Home/Hot Deals/designer-watch.png"
+                src="./Images/Hot Deals/Luxury Designer Watch.png"
                 class="card-img-top"
                 alt="Designer Watch"
                 style="height: 250px"
@@ -651,7 +718,7 @@
                 >HOT</span
               >
               <img
-                src="./Images/Home/Hot Deals/earbuds.png"
+                src="./Images/Hot Deals/Pro Wireless Earbuds.png"
                 class="card-img-top"
                 alt="Wireless Earbuds"
                 style="height: 250px"
@@ -679,7 +746,7 @@
                 >HOT</span
               >
               <img
-                src="./Images/Home/Hot Deals/laptop.png"
+                src="./Images/Hot Deals/Gaming Laptop Pro.png"
                 class="card-img-top"
                 alt="Gaming Laptop"
                 style="height: 250px"
@@ -712,7 +779,7 @@
           <div class="col-6 col-md-3 mb-3">
             <div class="product-card h-100">
               <img
-                src="./Images/best seller/smart band 4.jpg"
+                src="./Images/Best Sellers/Smart Band 4.png"
                 class="card-img-top object-fit-cover"
                 style="height: 250px"
                 alt="Smart Band"
@@ -735,7 +802,7 @@
           <div class="col-6 col-md-3 mb-3">
             <div class="product-card h-100">
               <img
-                src="./Images/best seller/wireless mouse.jpg"
+                src="./Images/Best Sellers/Wireless Mouse.png"
                 class="card-img-top object-fit-cover"
                 style="height: 250px"
                 alt="Wireless Mouse"
@@ -758,7 +825,7 @@
           <div class="col-6 col-md-3 mb-3">
             <div class="product-card h-100">
               <img
-                src="./Images/best seller/power bank.jpg"
+                src="./Images/Best Sellers/Power Bank 10000mAh.png"
                 class="card-img-top object-fit-cover"
                 style="height: 250px"
                 alt="Power Bank"
@@ -781,7 +848,7 @@
           <div class="col-6 col-md-3 mb-3">
             <div class="product-card h-100">
               <img
-                src="./Images/best seller/shart.png"
+                src="./Images/Best Sellers/Bluetooth Headset.png"
                 class="card-img-top object-fit-cover"
                 style="height: 250px"
                 alt="Bluetooth Headset"
@@ -814,7 +881,7 @@
           ></a>
         </div>
 
-        <div class="row">
+        <div class="row justforyou">
           <!-- Sunglasses Card START -->
           <div class="col-6 col-md-3 col-lg-2 mb-4">
             <div class="product-card h-100 position-relative">
@@ -1000,10 +1067,346 @@
             </div>
           </div>
           <!-- Wireless Mouse Card END -->
+          <!-- 7. Wireless Headphones -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >25% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1580894741820-01fe6e556d4f?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Wireless Headphones"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Wireless Headphones</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 2199.00
+                  <small class="text-muted"><del>Rs 2899.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(58)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Graphic T-shirt -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >20% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1618354691417-cd59b1a3795c?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Graphic T-shirt"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Graphic T-shirt</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 899.00
+                  <small class="text-muted"><del>Rs 1125.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i><i class="far fa-star"></i>
+                  <small class="text-muted">(33)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Office Chair -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >15% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1578898888121-8171c5f24c8d?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Office Chair"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Ergonomic Office Chair</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 5499.00
+                  <small class="text-muted"><del>Rs 6499.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(90)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Sunglasses Pouch -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >10% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1580327336514-8e05f7d35b14?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Sunglasses Pouch"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Sunglasses Pouch</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 299.00
+                  <small class="text-muted"><del>Rs 329.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(18)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. DSLR Lens -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >18% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1549921296-3a5b5e90f56d?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Camera Lens"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Canon DSLR Lens</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 8999.00
+                  <small class="text-muted"><del>Rs 10999.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i><i class="far fa-star"></i>
+                  <small class="text-muted">(61)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Smart Water Bottle -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >22% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1610396482353-5c5de974bf31?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Smart Water Bottle"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Smart Water Bottle</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 1299.00
+                  <small class="text-muted"><del>Rs 1650.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(37)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Leather Belt -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >30% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1570703030182-68b51a78c4de?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Leather Belt"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Genuine Leather Belt</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 799.00
+                  <small class="text-muted"><del>Rs 1149.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(44)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. Portable Charger -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >27% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1622529954442-bbb14c14fd0e?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Portable Charger"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Portable Power Bank</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 1099.00
+                  <small class="text-muted"><del>Rs 1499.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(50)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. Travel Mug -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >19% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1587202372775-98973d98f317?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Travel Mug"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Thermal Travel Mug</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 749.00
+                  <small class="text-muted"><del>Rs 925.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i><i class="far fa-star"></i>
+                  <small class="text-muted">(28)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 16. Gaming Keyboard -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >24% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1618060932015-bd4e3ec11472?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Gaming Keyboard"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">RGB Gaming Keyboard</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 1899.00
+                  <small class="text-muted"><del>Rs 2499.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i
+                  ><i class="fas fa-star-half-alt"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(73)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 17. Foldable Table -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >21% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1550583724-b269b7ddf94a?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Foldable Table"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">Wooden Foldable Table</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 2299.00
+                  <small class="text-muted"><del>Rs 2899.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(39)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 18. Mini Fan -->
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <div class="product-card h-100 position-relative">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+                >17% OFF</span
+              >
+              <img
+                src="https://images.unsplash.com/photo-1619598451476-0918831b07f0?auto=format&fit=crop&w=500&h=500&q=80"
+                class="card-img-top"
+                alt="Mini Fan"
+                style="height: 150px; object-fit: cover"
+              />
+              <div class="p-3">
+                <h6 class="text-truncate mb-1">USB Mini Fan</h6>
+                <p class="text-danger font-weight-bold mb-1">
+                  Rs 599.00
+                  <small class="text-muted"><del>Rs 729.00</del></small>
+                </p>
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="far fa-star"></i><i class="far fa-star"></i
+                  ><i class="far fa-star"></i>
+                  <small class="text-muted">(21)</small>
+                </div>
+              </div>
+          </div>
         </div>
 
         <div class="text-center mt-4">
-          <button class="btn btn-outline-danger px-4 rounded-pill">
+          <button class="btn btn-outline-danger px-4 rounded-pill loadmore">
             LOAD MORE
           </button>
         </div>
@@ -1117,6 +1520,7 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 
     <!-- Countdown timer script -->
     <script>

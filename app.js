@@ -35,3 +35,41 @@ fetch("components.json")
     containerDiv.innerHTML = "<h2>Something went wrong while loading!</h2>";
     console.error(err);
   });
+
+// cart work
+
+(function () {
+  // Cart toggle
+  document.querySelector("#cartButton")?.addEventListener("click", () => {
+    let cart = document.querySelector(".cart-container");
+    cart.classList.toggle("cart-container1");
+  });
+
+  // Quantity update
+  document.querySelectorAll(".mycart").forEach((Element) => {
+    Element.addEventListener("click", (event) => {
+      let quantity = event.target.parentNode.children[1];
+      let num = parseInt(quantity.textContent);
+
+      if (event.target.textContent === "+") {
+        num++;
+        quantity.textContent = num;
+      } else if (event.target.textContent === "-") {
+        if (num > 1) {
+          num--;
+          quantity.textContent = num;
+        }
+      }
+    });
+  });
+
+  //  Delete item
+  document.querySelectorAll(".btn-danger").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      let cartItem = event.target.closest(".cart-item");
+      if (cartItem) {
+        cartItem.remove();
+      }
+    });
+  });
+})();

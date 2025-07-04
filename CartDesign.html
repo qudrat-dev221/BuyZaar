@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .cart-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .cart-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+      }
+      .product-col {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+      }
+      .product-img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 15px;
+      }
+      .price-col {
+        width: 80px;
+        text-align: right;
+      }
+      .qty-col {
+        width: 120px;
+        text-align: center;
+      }
+      .total-col {
+        width: 80px;
+        text-align: right;
+      }
+      .delete-col {
+        width: 50px;
+        text-align: center;
+      }
+      .quantity-btn {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        text-align: center;
+      }
+      .proceed-btn {
+        background-color: #ff6b6b;
+        border: none;
+        padding: 10px 30px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+      }
+      .cart-title {
+        text-align: center;
+        color: #d32f2f;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .cart-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding-top: 15px;
+      }
+
+      /* Mobile layout */
+      @media (max-width: 576px) {
+        .cart-item {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 15px 0;
+        }
+        .product-col {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .price-col,
+        .qty-col,
+        .total-col,
+        .delete-col {
+          width: 100%;
+          text-align: left;
+          margin: 5px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .price-col::before {
+          content: "Price: ";
+          font-weight: bold;
+        }
+        .total-col::before {
+          content: "Total: ";
+          font-weight: bold;
+        }
+        .qty-col::before {
+          content: "Quantity: ";
+          font-weight: bold;
+          margin-right: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart-container">
+      <h4 class="cart-title">Shopping Cart</h4>
+
+      <!-- First Item -->
+      <div class="cart-item">
+        <div class="product-col">
+          <img
+            src="./Images/Best Sellers/Bluetooth Headset.png"
+            class="product-img"
+            alt="Sunglasses"
+          />
+          <strong>Original Sunglasses</strong>
+        </div>
+
+        <div class="qty-col">
+          <div class="d-flex align-items-center">
+            <button class="btn quantity-btn">-</button>
+            <span class="mx-2">1</span>
+            <button class="btn quantity-btn">+</button>
+          </div>
+        </div>
+        <div class="total-col"><strong>Rs. 333</strong></div>
+        <div class="delete-col">
+          <button class="btn btn-danger btn-sm">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Item -->
+      <div class="cart-item">
+        <div class="product-col">
+          <img
+            src="./Images/Best Sellers/Bluetooth Headset.png"
+            class="product-img"
+            alt="Headphones"
+          />
+          <strong>Wireless Headphones</strong>
+        </div>
+
+        <div class="qty-col">
+          <div class="d-flex align-items-center">
+            <button class="btn quantity-btn">-</button>
+            <span class="mx-2">2</span>
+            <button class="btn quantity-btn">+</button>
+          </div>
+        </div>
+        <div class="total-col"><strong>Rs. 1998</strong></div>
+        <div class="delete-col">
+          <button class="btn btn-danger btn-sm">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="cart-footer">
+        <h5 class="m-0">
+          Grand Total: <span class="text-danger">Rs. 2331</span>
+        </h5>
+        <button class="btn proceed-btn">PROCEED</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
