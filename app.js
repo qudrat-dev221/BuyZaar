@@ -40,16 +40,37 @@ fetch("components.json")
 
 (function () {
   // Cart toggle
-  document.querySelector("#cartButton")?.addEventListener("click", () => {
-    let cart = document.querySelector(".cart-container");
-    cart.classList.toggle("cart-container1");
+  document.querySelectorAll(".cartButton").forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let cart = document.querySelector(".cart-container");
+      cart.classList.toggle("cart-container1");
+    });
   });
+
+  // Grand Total Function
+  function updateGrandTotal() {
+    let total = 0;
+    document.querySelectorAll(".total-col strong").forEach((el) => {
+      total += parseInt(el.textContent.replace("Rs. ", ""));
+    });
+    document.querySelector(".cart-footer span").textContent = `Rs. ${total}`;
+  }
 
   // Quantity update
   document.querySelectorAll(".mycart").forEach((Element) => {
     Element.addEventListener("click", (event) => {
       let quantity = event.target.parentNode.children[1];
       let num = parseInt(quantity.textContent);
+
+      // Get parent cart item and total price element
+      let cartItem = event.target.closest(".cart-item");
+      let totalEl = cartItem.querySelector(".total-col strong");
+
+      // Extract current total price
+      let currentTotal = parseInt(totalEl.textContent.replace("Rs. ", ""));
+
+      // Get per unit price from current total / quantity
+      let unitPrice = Math.round(currentTotal / num);
 
       if (event.target.textContent === "+") {
         num++;
@@ -60,16 +81,28 @@ fetch("components.json")
           quantity.textContent = num;
         }
       }
+
+      // Update item total
+      totalEl.textContent = `Rs. ${unitPrice * num}`;
+
+      // Update grand total
+      updateGrandTotal();
     });
   });
 
-  //  Delete item
+  // Delete item
   document.querySelectorAll(".btn-danger").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       let cartItem = event.target.closest(".cart-item");
       if (cartItem) {
         cartItem.remove();
+        updateGrandTotal();
       }
     });
   });
+
+  // Initial grand total
+  updateGrandTotal();
 })();
+
+// COUNT DOWN FUNCTIONS

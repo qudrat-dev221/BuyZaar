@@ -147,12 +147,79 @@
 
           <button
           id="cartButton"
-            class="btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center ms-lg-3"
+            class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center ms-lg-3"
           >
             <i class="fas fa-shopping-cart me-2"></i> Cart
           </button>
         </div>
       </div>
+       <!-- cart start -->
+     <div class="cart-container">
+      <h4 class="cart-title">Shopping Cart</h4>
+
+      <!-- First Item -->
+      <div class="cart-item">
+        <div class="product-col">
+          <img
+            src="./Images/Best Sellers/Bluetooth Headset.png"
+            class="product-img"
+            alt="Sunglasses"
+          />
+          <strong>Original Sunglasses</strong>
+        </div>
+
+        <div class="qty-col">
+          <div class="d-flex align-items-center">
+            <button class="btn quantity-btn mycart">-</button>
+            <span class="mx-2">1</span>
+            <button class="btn quantity-btn mycart">+</button>
+          </div>
+        </div>
+        <div class="total-col"><strong>Rs. 333</strong></div>
+        <div class="delete-col">
+          <button class="btn btn-danger btn-sm">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Item -->
+      <div class="cart-item">
+        <div class="product-col">
+          <img
+            src="./Images/Best Sellers/Bluetooth Headset.png"
+            class="product-img"
+            alt="Headphones"
+          />
+          <strong>Wireless Headphones</strong>
+        </div>
+
+        <div class="qty-col">
+          <div class="d-flex align-items-center">
+            <button class="btn quantity-btn mycart">-</button>
+            <span class="mx-2">2</span>
+            <button class="btn quantity-btn mycart">+</button>
+          </div>
+        </div>
+        <div class="total-col"><strong class="price">Rs. 1998</strong></div>
+        <div class="delete-col">
+          <button class="btn btn-danger btn-sm">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="cart-footer ">
+        <h5 class="m-0 ">
+          Grand Total : <span class="text-danger">Rs. 2331</span>
+        </h5>
+        <button class="btn proceed-btn btn-success">PROCEED 
+      
+        </button>
+      </div>
+    </div>
+     <!-- cart end -->
     </header>
     <!-- HEADER END -->
 
@@ -176,16 +243,7 @@
       </div>
       <div class="offcanvas-body px-3">
         <!-- Search bar for mobile -->
-        <div class="searchBar mb-4">
-          <input
-            type="text"
-            placeholder="Search Product"
-            class="searchInput w-100"
-          />
-          <button class="searButton">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+      
 
         <!-- Categories in offcanvas -->
         <div class="row g-3 text-center">
@@ -346,71 +404,43 @@
       </div>
     </div>
     <!-- HERO CAROUSEL END -->
-     <!-- cart start -->
-     <div class="cart-container">
-      <h4 class="cart-title">Shopping Cart</h4>
-
-      <!-- First Item -->
-      <div class="cart-item">
-        <div class="product-col">
-          <img
-            src="./Images/Best Sellers/Bluetooth Headset.png"
-            class="product-img"
-            alt="Sunglasses"
-          />
-          <strong>Original Sunglasses</strong>
+    
+    <!-- bottom navbar -->
+   <div  class="d-none bottom-navbar shadow-sm">
+    <nav class="navbar bg-body-tertiary " >
+      <div
+        class="container d-flex flex-nowrap justify-content-between align-items-center"
+      >
+        <!-- Logo -->
+        <div
+          id="myLogo"
+          class="navbar-brand fw-bold text-danger d-flex align-items-center"
+        >
+          <i class="fas fa-shopping-bag me-2"></i>
+          <span>BuyZaar</span>
         </div>
 
-        <div class="qty-col">
-          <div class="d-flex align-items-center">
-            <button class="btn quantity-btn mycart">-</button>
-            <span class="mx-2">1</span>
-            <button class="btn quantity-btn mycart">+</button>
-          </div>
+        <!-- Search bar -->
+        <div id="searchBar" class="searchBar">
+          <input type="text" placeholder="Search Product" id="searchInput" />
+          <button id="searchButton">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-        <div class="total-col"><strong>Rs. 333</strong></div>
-        <div class="delete-col">
-          <button class="btn btn-danger btn-sm">
-            <i class="fa-solid fa-trash"></i>
+
+        <!-- Cart button -->
+        <div>
+          <button
+            id="cartButton"
+            class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center"
+          >
+            <i class="fas fa-shopping-cart me-2"></i> Cart
           </button>
         </div>
       </div>
-
-      <!-- Second Item -->
-      <div class="cart-item">
-        <div class="product-col">
-          <img
-            src="./Images/Best Sellers/Bluetooth Headset.png"
-            class="product-img"
-            alt="Headphones"
-          />
-          <strong>Wireless Headphones</strong>
-        </div>
-
-        <div class="qty-col">
-          <div class="d-flex align-items-center">
-            <button class="btn quantity-btn mycart">-</button>
-            <span class="mx-2">2</span>
-            <button class="btn quantity-btn mycart">+</button>
-          </div>
-        </div>
-        <div class="total-col"><strong>Rs. 1998</strong></div>
-        <div class="delete-col">
-          <button class="btn btn-danger btn-sm">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="cart-footer">
-        <h5 class="m-0">
-          Grand Total: <span class="text-danger">Rs. 2331</span>
-        </h5>
-        <button class="btn proceed-btn">PROCEED</button>
-      </div>
-    </div>
-     <!-- cart end -->
+    </nav>
+   </div>
+    <!-- bottom navbar -->
 
     <!-- CATEGORIES SECTION START -->
     <div class="container-fluid bg-light py-5">
