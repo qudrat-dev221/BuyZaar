@@ -1,8 +1,1 @@
-{
-  "loadmore": "<div class=\"col-6 col-md-3 col-lg-2 mb-4\"><div class=\"product-card h-100 position-relative\"><span class=\"badge bg-danger position-absolute top-0 end-0 m-2\">35% OFF</span><img src=\"https://images.unsplash.com/photo-1580894908360-8b808647ff50?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80\" class=\"card-img-top\" alt=\"Wireless Earbuds\" style=\"height: 150px; object-fit: cover\" /><div class=\"p-3\"><h6 class=\"text-truncate mb-1\">Wireless Earbuds</h6><p class=\"text-danger font-weight-bold mb-1\">Rs 799.99 <small class=\"text-muted\"><del>Rs 1229.99</del></small></p><div class=\"rating text-warning small\"><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star-half-alt\"></i><i class=\"far fa-star\"></i><i class=\"far fa-star\"></i><small class=\"text-muted\">(88)</small></div></div></div></div><div class=\"col-6 col-md-3 col-lg-2 mb-4\"><div class=\"product-card h-100 position-relative\"><span class=\"badge bg-danger position-absolute top-0 end-0 m-2\">40% OFF</span><img src=\"https://images.unsplash.com/photo-1610376811263-b0eb9c6d2e41?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80\" class=\"card-img-top\" alt=\"Smart Watch\" style=\"height: 150px; object-fit: cover\" /><div class=\"p-3\"><h6 class=\"text-truncate mb-1\">Smart Watch</h6><p class=\"text-danger font-weight-bold mb-1\">Rs 999.00 <small class=\"text-muted\"><del>Rs 1650.00</del></small></p><div class=\"rating text-warning small\"><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"far fa-star\"></i><i class=\"far fa-star\"></i><small class=\"text-muted\">(101)</small></div></div></div></div> ... (continue like this for all 9 cards) ..."
-}
-
-
-
-
-  
+{"electronics": "<div class=\"container py-4\" id=\"homepage\"><div class=\"row\"><div class=\"col-12\"><h2 class=\"text-danger fw-bold mb-4\">Welcome to Home Page</h2><!-- Home page content will go here --></div></div></div>"}

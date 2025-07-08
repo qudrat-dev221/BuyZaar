@@ -11,9 +11,9 @@ fetch("components.json")
     let page = urlParams.get("page") || "home";
     containerDiv.innerHTML = component[page] || "<h2>404 - Page Not Found</h2>";
     // calling function for components inner content
-
+    prepare();
     // Button click
-    document.querySelectorAll(".change").forEach((btn) => {
+    document.querySelectorAll(".routingButton").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         let eventName = e.target.dataset.name;
         let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
@@ -29,6 +29,7 @@ fetch("components.json")
       let page = event.state?.page || urlParams.get("page") || "home";
       let html = component[page] || "<h2>404 - Page Not Found</h2>";
       containerDiv.innerHTML = html;
+      prepare();
     };
   })
   .catch((err) => {
@@ -36,17 +37,7 @@ fetch("components.json")
     console.error(err);
   });
 
-// cart work
-
-(function () {
-  // Cart toggle
-  document.querySelectorAll(".cartButton").forEach((icon) => {
-    icon.addEventListener("click", () => {
-      let cart = document.querySelector(".cart-container");
-      cart.classList.toggle("cart-container1");
-    });
-  });
-
+const prepare = () => {
   // Grand Total Function
   function updateGrandTotal() {
     let total = 0;
@@ -56,66 +47,87 @@ fetch("components.json")
     document.querySelector(".cart-footer span").textContent = `Rs. ${total}`;
   }
 
-  // Quantity update
-  document.querySelectorAll(".mycart").forEach((Element) => {
-    Element.addEventListener("click", (event) => {
-      let quantity = event.target.parentNode.children[1];
-      let num = parseInt(quantity.textContent);
+  // cart work
 
-      // Get parent cart item and total price element
-      let cartItem = event.target.closest(".cart-item");
-      let totalEl = cartItem.querySelector(".total-col strong");
+  (function () {
+    // Cart toggle
+    document.querySelectorAll(".cartButton").forEach((icon) => {
+      icon.addEventListener("click", () => {
+        let cart = document.querySelector(".cart-container");
+        cart.classList.toggle("cart-container1");
+      });
+    });
 
-      // Extract current total price
-      let currentTotal = parseInt(totalEl.textContent.replace("Rs. ", ""));
+    // Quantity update
+    document.querySelectorAll(".mycart").forEach((Element) => {
+      Element.addEventListener("click", (event) => {
+        let quantity = event.target.parentNode.children[1];
+        let num = parseInt(quantity.textContent);
 
-      // Get per unit price from current total / quantity
-      let unitPrice = Math.round(currentTotal / num);
+        // Get parent cart item and total price element
+        let cartItem = event.target.closest(".cart-item");
+        let totalEl = cartItem.querySelector(".total-col strong");
 
-      if (event.target.textContent === "+") {
-        num++;
-        quantity.textContent = num;
-      } else if (event.target.textContent === "-") {
-        if (num > 1) {
-          num--;
+        // Extract current total price
+        let currentTotal = parseInt(totalEl.textContent.replace("Rs. ", ""));
+
+        // Get per unit price from current total / quantity
+        let unitPrice = Math.round(currentTotal / num);
+
+        if (event.target.textContent === "+") {
+          num++;
           quantity.textContent = num;
+        } else if (event.target.textContent === "-") {
+          if (num > 1) {
+            num--;
+            quantity.textContent = num;
+          }
         }
-      }
 
-      // Update item total
-      totalEl.textContent = `Rs. ${unitPrice * num}`;
+        // Update item total
+        totalEl.textContent = `Rs. ${unitPrice * num}`;
 
-      // Update grand total
-      updateGrandTotal();
-    });
-  });
-
-  // Delete item
-  document.querySelectorAll(".btn-danger").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      let cartItem = event.target.closest(".cart-item");
-      if (cartItem) {
-        cartItem.remove();
+        // Update grand total
         updateGrandTotal();
-      }
+      });
     });
-  });
 
-  // Initial grand total
-  updateGrandTotal();
-})();
+    // Delete item
+    document.querySelectorAll(".btn-danger").forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        let cartItem = event.target.closest(".cart-item");
+        if (cartItem) {
+          cartItem.remove();
+          updateGrandTotal();
+        }
+      });
+    });
 
-// COUNT DOWN FUNCTIONS
-(() => {
-  let such = true;
-  let toggleButton = document.querySelector("#toggleMobile");
-  toggleButton.addEventListener("click", () => {
-    if (such) {
-      toggleButton.innerHTML = '<i class="fa-solid fa-xmark text-danger"></i>';
-      such = false;
-    } else {
-      toggleButton.innerHTML = '<i class="fa-solid fa-bars text-danger"></i>';
-      such = true;
-    }
+    // Initial grand total
+    updateGrandTotal();
+  })();
+
+  (() => {
+    let such = true;
+    let toggleButton = document.querySelector("#toggleMobile");
+    let mobileMenu = document.querySelector(".slidemenu1"); // target by class
+
+    toggleButton.addEventListener("click", () => {
+      if (such) {
+        toggleButton.innerHTML =
+          '<i class="fa-solid fa-xmark text-danger"></i>';
+      } else {
+        toggleButton.innerHTML = '<i class="fa-solid fa-bars text-danger"></i>';
+      }
+
+      mobileMenu.classList.toggle("slidemenu2");
+      such = !such;
+    });
+  })();
+};
+
+document.querySelectorAll(".routingButton").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    alert(event.currentTarget.dataset.name);
   });
-})();
+});
