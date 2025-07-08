@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile Menu - Categories</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Categories Menu Div -->
+    <div
+      class="position-fixed start-0 top-0 h-100 bg-white shadow"
+      style="width: 280px; z-index: 1000"
+      id="mobilemenu"
+    >
+      <!-- Menu Header -->
+      <div
+        class="bg-danger text-white p-3 d-flex align-items-center"
+        style="font-weight: 700"
+      >
+        <i class="fas fa-shopping-bag me-2"></i>
+        <span>BuyZaar</span>
+      </div>
+
+      <!-- Categories Section -->
+      <div class="overflow-auto" style="height: calc(100% - 56px)">
+        <!-- Categories Heading -->
+        <div class="p-3 border-top border-bottom bg-light">
+          <h6 class="fw-bold text-danger px-3">Categories</h6>
+        </div>
+
+        <!-- Category Items -->
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="home"
+          data-category="home"
+        >
+          <i class="fas fa-home text-danger me-3"></i>Home
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="electronics"
+          data-category="electronics"
+        >
+          <i class="fas fa-mobile-alt text-danger me-3"></i>Electronics
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="clothing"
+          data-category="clothing"
+        >
+          <i class="fas fa-tshirt text-danger me-3"></i>Clothing
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="shoes"
+          data-category="shoes"
+        >
+          <i class="fas fa-shoe-prints text-danger me-3"></i>Shoes
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="toys"
+          data-category="toys"
+        >
+          <i class="fas fa-gamepad text-danger me-3"></i>Toys
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="beauty"
+          data-category="beauty"
+        >
+          <i class="fas fa-spa text-danger me-3"></i>Beauty
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="groceries"
+          data-category="groceries"
+        >
+          <i class="fas fa-utensils text-danger me-3"></i>Groceries
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="computers"
+          data-category="computers"
+        >
+          <i class="fas fa-laptop text-danger me-3"></i>Computers
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

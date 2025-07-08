@@ -106,3 +106,16 @@ fetch("components.json")
 })();
 
 // COUNT DOWN FUNCTIONS
+(() => {
+  let such = true;
+  let toggleButton = document.querySelector("#toggleMobile");
+  toggleButton.addEventListener("click", () => {
+    if (such) {
+      toggleButton.innerHTML = '<i class="fa-solid fa-xmark text-danger"></i>';
+      such = false;
+    } else {
+      toggleButton.innerHTML = '<i class="fa-solid fa-bars text-danger"></i>';
+      such = true;
+    }
+  });
+})();

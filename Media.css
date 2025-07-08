@@ -80,7 +80,7 @@
 
 /* bottom navbar */
 
-@media (min-width: 300px) and (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 997px) {
   .bottom-navbar {
     display: block !important;
     width: 100%;
@@ -92,7 +92,7 @@
 
   #searchBar {
     width: 50% !important;
-    margin-left: -7px;
+    margin: 10px;
   }
 
   #searchInput {
@@ -122,5 +122,20 @@
     position: absolute;
     top: 100%;
     right: 0%;
+  }
+
+  #toggleMobile {
+    height: 30px;
+    width: 33px;
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: none;
+    outline: 1px solid red;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.5 ease;
+    display: block;
   }
 }
