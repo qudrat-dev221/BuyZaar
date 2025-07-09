@@ -83,11 +83,15 @@
 @media (min-width: 300px) and (max-width: 997px) {
   .bottom-navbar {
     display: block !important;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     z-index: 2;
     position: fixed;
     bottom: 0px;
+  }
+
+  .headerposition {
+    position: sticky;
   }
 
   #searchBar {
@@ -137,5 +141,26 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: all 0.5 ease;
     display: block;
+  }
+
+  .slidemenu1 {
+    background-color: white;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    width: 280px;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    display: block;
+  }
+
+  .slidemenu2 {
+    background-color: white;
+    position: fixed;
+    right: 0px;
+    height: 100vh;
+    width: 280px;
+    transition: all 0.5s ease;
+    transform: translateX(0);
   }
 }

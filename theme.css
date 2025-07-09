@@ -73,17 +73,17 @@
   background-color: white;
   position: absolute;
   right: 0px;
-  height: 100vh;
+  height: 90vh;
   width: 280px;
   transition: all 0.5s ease;
   transform: translateX(100%);
+  display: none;
 }
 
 .slidemenu2 {
   background-color: white;
-  position: absolute;
   right: 0px;
-  height: 100vh;
+  height: 75vh;
   width: 280px;
   transition: all 0.5s ease;
   transform: translateX(0);

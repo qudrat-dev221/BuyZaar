@@ -22,16 +22,22 @@
   </head>
   <body>
     <!-- HEADER START -->
-    <header class=" headerposition navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <header
+      class="headerposition navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+    >
       <div class="container">
         <!-- Brand -->
-        <div class="mylogo navbar-brand fw-bold text-danger d-flex justify-content-start align-items-center">
+        <div
+          class="mylogo navbar-brand fw-bold text-danger d-flex justify-content-start align-items-center"
+        >
           <i class="fas fa-shopping-bag me-2"></i>
           <span>BuyZaar</span>
         </div>
-    
+
         <!-- Navbar content -->
-        <div class="d-none d-lg-flex flex-column flex-lg-row align-items-center w-100">
+        <div
+          class="d-none d-lg-flex flex-column flex-lg-row align-items-center w-100"
+        >
           <!-- Categories Dropdown -->
           <div class="dropdown me-3">
             <button
@@ -51,7 +57,7 @@
               >
                 <i class="fas fa-home me-2 text-danger"></i>Home
               </button>
-    
+
               <a
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="electronics"
@@ -60,7 +66,7 @@
               >
                 <i class="fas fa-mobile-alt me-2 text-danger"></i>Electronics
               </a>
-    
+
               <a
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="clothing"
@@ -69,7 +75,7 @@
               >
                 <i class="fas fa-tshirt me-2 text-danger"></i>Clothing
               </a>
-    
+
               <button
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="shoes"
@@ -77,7 +83,7 @@
               >
                 <i class="fas fa-shoe-prints me-2 text-danger"></i>Shoes
               </button>
-    
+
               <button
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="toys"
@@ -85,7 +91,7 @@
               >
                 <i class="fas fa-gamepad me-2 text-danger"></i>Toys
               </button>
-    
+
               <button
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="beauty"
@@ -93,7 +99,7 @@
               >
                 <i class="fas fa-spa me-2 text-danger"></i>Beauty
               </button>
-    
+
               <button
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="groceries"
@@ -101,7 +107,7 @@
               >
                 <i class="fas fa-utensils me-2 text-danger"></i>Groceries
               </button>
-    
+
               <button
                 class="routingButton dropdown-item d-flex align-items-center"
                 data-category="computers"
@@ -111,7 +117,7 @@
               </button>
             </div>
           </div>
-    
+
           <div class="searchBar">
             <input
               type="text"
@@ -122,24 +128,24 @@
               <i class="fas fa-search"></i>
             </button>
           </div>
-    
+
           <!-- Cart Button -->
           <button class="profil">
             <i class="fa-solid fa-user text-danger"></i>
           </button>
-    
+
           <button
-          id="cartButton"
+            id="cartButton"
             class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center ms-lg-3"
           >
             <i class="fas fa-shopping-cart me-2"></i> Cart
           </button>
         </div>
       </div>
-       <!-- cart start -->
-     <div class="cart-container">
+      <!-- cart start -->
+      <div class="cart-container">
         <h4 class="cart-title">Shopping Cart</h4>
-    
+
         <!-- First Item -->
         <div class="cart-item">
           <div class="product-col">
@@ -150,7 +156,7 @@
             />
             <strong>Original Sunglasses</strong>
           </div>
-    
+
           <div class="qty-col">
             <div class="d-flex align-items-center">
               <button class="btn quantity-btn mycart">-</button>
@@ -165,7 +171,7 @@
             </button>
           </div>
         </div>
-    
+
         <!-- Second Item -->
         <div class="cart-item">
           <div class="product-col">
@@ -176,7 +182,7 @@
             />
             <strong>Wireless Headphones</strong>
           </div>
-    
+
           <div class="qty-col">
             <div class="d-flex align-items-center">
               <button class="btn quantity-btn mycart">-</button>
@@ -191,7 +197,7 @@
             </button>
           </div>
         </div>
-    
+
         <!-- Footer -->
         <div class="cart-footer">
           <h5 class="m-0">
@@ -200,102 +206,99 @@
           <button class="btn proceed-btn btn-success">PROCEED</button>
         </div>
       </div>
-       <!-- cart end -->
+      <!-- cart end -->
 
-       <Button id="toggleMobile"><i class="fa-solid fa-bars text-danger"></i></Button>
-       
-   
+      <button id="toggleMobile">
+        <i class="fa-solid fa-bars text-danger"></i>
+      </button>
     </header>
     <!-- HEADER END -->
-  <!-- Categories Menu Div -->
-  <div
-  class=" h-100 bg-white shadow slidemenu1"
-  style="width: 280px; z-index: 1000"
-  id="mobilemenu"
->
-
-
-  <!-- Categories Section -->
-  <div class="overflow-auto  " style="height: calc(100% - 56px)">
-    <!-- Categories Heading -->
-    <div class="p-3 border-top border-bottom bg-white text-center">
-      <h6 class="fw-bold text-danger px-3">Categories</h6>
-    </div>
-
-    <!-- Category Items -->
+    <!-- Categories Menu Div -->
     <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="home"
-      data-category="home"
+      class="h-100 bg-white shadow slidemenu1"
+      style="width: 280px; z-index: 1000"
+      id="mobilemenu"
     >
-      <i class="fas fa-home text-danger me-2"></i>Home
-    </div>
+      <!-- Categories Section -->
+      <div class="overflow-auto" style="height: calc(100% - 56px)">
+        <!-- Categories Heading -->
+        <div class="p-3 border-top border-bottom bg-white text-center">
+          <h6 class="fw-bold text-danger px-3">Categories & Profile</h6>
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="electronics"
-      data-category="electronics"
-    >
-      <i class="fas fa-mobile-alt text-danger me-2"></i>Electronics
-    </div>
+        <!-- Category Items -->
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="home"
+          data-category="home"
+        >
+          <i class="fas fa-home text-danger me-2"></i>Home
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="clothing"
-      data-category="clothing"
-    >
-      <i class="fas fa-tshirt text-danger me-2"></i>Clothing
-    </div>
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="electronics"
+          data-category="electronics"
+        >
+          <i class="fas fa-mobile-alt text-danger me-2"></i>Electronics
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="shoes"
-      data-category="shoes"
-    >
-      <i class="fas fa-shoe-prints text-danger me-2"></i>Shoes
-    </div>
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="clothing"
+          data-category="clothing"
+        >
+          <i class="fas fa-tshirt text-danger me-2"></i>Clothing
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="toys"
-      data-category="toys"
-    >
-      <i class="fas fa-gamepad text-danger me-2"></i>Toys
-    </div>
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="shoes"
+          data-category="shoes"
+        >
+          <i class="fas fa-shoe-prints text-danger me-2"></i>Shoes
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="beauty"
-      data-category="beauty"
-    >
-      <i class="fas fa-spa text-danger me-2"></i>Beauty
-    </div>
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="toys"
+          data-category="toys"
+        >
+          <i class="fas fa-gamepad text-danger me-2"></i>Toys
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="groceries"
-      data-category="groceries"
-    >
-      <i class="fas fa-utensils text-danger me-2"></i>Groceries
-    </div>
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="beauty"
+          data-category="beauty"
+        >
+          <i class="fas fa-spa text-danger me-2"></i>Beauty
+        </div>
 
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="computers"
-      data-category="computers"
-    >
-      <i class="fas fa-laptop text-danger me-2"></i>Computers
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="groceries"
+          data-category="groceries"
+        >
+          <i class="fas fa-utensils text-danger me-2"></i>Groceries
+        </div>
+
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="computers"
+          data-category="computers"
+        >
+          <i class="fas fa-laptop text-danger me-2"></i>Computers
+        </div>
+        <div
+          class="routingButton p-3 ps-4 border-bottom"
+          data-name="profile"
+          data-category="computers"
+        >
+          <i class="fas fa-user text-danger me-2"></i>Profile
+        </div>
+      </div>
     </div>
-    <div
-      class="routingButton p-3 ps-4 border-bottom"
-      data-name="profile"
-      data-category="computers"
-    >
-    <i class="fas fa-user text-danger me-2"></i>Profile
-    </div>
-  </div>
-</div>
-  
 
     <!-- HERO CAROUSEL START -->
     <div class="container-fluid px-0">
@@ -370,44 +373,43 @@
       </div>
     </div>
     <!-- HERO CAROUSEL END -->
-    
+
     <!-- bottom navbar -->
-   <div  class="d-none bottom-navbar shadow-sm">
-    <nav class="navbar bg-body-tertiary " >
-      <div
-        class="container d-flex flex-nowrap justify-content-between align-items-center"
-      >
-        <!-- Logo -->
+    <div class="d-none bottom-navbar shadow-sm">
+      <nav class="navbar bg-body-tertiary">
         <div
-          id="myLogo"
-          class="navbar-brand fw-bold text-danger d-flex align-items-center"
+          class="container d-flex flex-nowrap justify-content-around align-items-center"
         >
-          <i class="fas fa-shopping-bag me-2"></i>
-          <span>BuyZaar</span>
-        </div>
-
-        <!-- Search bar -->
-        <div id="searchBar" class="searchBar">
-          <input type="text" placeholder="Search Product" id="searchInput" />
-          <button id="searchButton">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-
-        <!-- Cart button -->
-        <div>
-          <button
-            id="cartButton"
-            class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center"
+          <!-- Logo -->
+          <div
+            id="myLogo"
+            class="navbar-brand fw-bold text-danger d-flex align-items-center"
           >
-            <i class="fas fa-shopping-cart me-2"></i> Cart
-          </button>
-        </div>
-      </div>
-    </nav>
-   </div>
-    <!-- bottom navbar -->
+            <i class="fas fa-shopping-bag me-2"></i>
+            <span>BuyZaar</span>
+          </div>
 
+          <!-- Search bar -->
+          <div id="searchBar" class="searchBar">
+            <input type="text" placeholder="Search Product" id="searchInput" />
+            <button id="searchButton">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <!-- Cart button -->
+          <div>
+            <button
+              id="cartButton"
+              class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center"
+            >
+              <i class="fas fa-shopping-cart me-2"></i> Cart
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- bottom navbar -->
 
     <!-- CATEGORIES SECTION START -->
     <div class="container-fluid bg-light py-5">
@@ -528,107 +530,168 @@
 
         <div class="row">
           <!-- Headphones Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="wireless-headphones"
+          >
             <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+              <span
+                class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
                 >50% OFF</span
               >
               <img
                 src="./Images/Home/Flash Sale/wireless bluetooth handphone.png"
                 class="card-img-top"
                 alt="Headphones"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Wireless Bluetooth Headphones</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 1,499
-                  <small class="text-muted"><del>Rs 2,999</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 2,999</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
                   <div class="progress-bar bg-danger" style="width: 75%"></div>
                 </div>
                 <small class="text-muted">Sold: 75%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <small class="text-muted">(215)</small>
+                </div>
               </div>
             </div>
           </div>
           <!-- Headphones Card END -->
 
           <!-- Smart Watch Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="smart-watch"
+          >
             <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+              <span
+                class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
                 >40% OFF</span
               >
               <img
                 src="./Images/Home/Flash Sale/smart watch.png"
                 class="card-img-top"
                 alt="Smart Watch"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Smart Watch Series 5</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 2,999
-                  <small class="text-muted"><del>Rs 4,999</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 4,999</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
                   <div class="progress-bar bg-danger" style="width: 60%"></div>
                 </div>
                 <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <small class="text-muted">(178)</small>
+                </div>
               </div>
             </div>
           </div>
           <!-- Smart Watch Card END -->
 
           <!-- Wireless Charger Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="wireless-charger"
+          >
             <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+              <span
+                class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
                 >30% OFF</span
               >
               <img
                 src="./Images/Home/Flash Sale/wireless charging.png"
                 class="card-img-top"
                 alt="Wireless Charger"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Wireless Charging Pad</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 699 <small class="text-muted"><del>Rs 999</del></small>
+                  Rs 699
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 999</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
                   <div class="progress-bar bg-danger" style="width: 45%"></div>
                 </div>
                 <small class="text-muted">Sold: 45%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <small class="text-muted">(342)</small>
+                </div>
               </div>
             </div>
           </div>
           <!-- Wireless Charger Card END -->
 
           <!-- Bluetooth Speaker Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="bluetooth-speaker"
+          >
             <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+              <span
+                class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
                 >25% OFF</span
               >
               <img
                 src="./Images/Home/Flash Sale/Bluetooth Speaker.png"
                 class="card-img-top"
                 alt="Bluetooth Speaker"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Bluetooth Speaker</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 1,299
-                  <small class="text-muted"><del>Rs 1,799</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 1,799</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
                   <div class="progress-bar bg-danger" style="width: 30%"></div>
                 </div>
                 <small class="text-muted">Sold: 30%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                  <small class="text-muted">(95)</small>
+                </div>
               </div>
             </div>
           </div>
@@ -652,7 +715,10 @@
 
         <div class="row">
           <!-- Smartphone Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="premium-smartphone"
+          >
             <div class="product-card h-100 position-relative">
               <span
                 class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
@@ -662,25 +728,39 @@
                 src="./Images/Hot Deals/Premium Smartphone X1.png"
                 class="card-img-top"
                 alt="Premium Smartphone"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Premium Smartphone X1</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 19,999
-                  <small class="text-muted"><del>Rs 29,999</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 29,999</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
-                  <div class="progress-bar bg-warning" style="width: 85%"></div>
+                  <div class="progress-bar bg-danger" style="width: 85%"></div>
                 </div>
                 <small class="text-muted">Sold: 85%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <small class="text-muted">(320)</small>
+                </div>
               </div>
             </div>
           </div>
           <!-- Smartphone Card END -->
 
           <!-- Designer Watch Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="designer-watch"
+          >
             <div class="product-card h-100 position-relative">
               <span
                 class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
@@ -690,25 +770,39 @@
                 src="./Images/Hot Deals/Luxury Designer Watch.png"
                 class="card-img-top"
                 alt="Designer Watch"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Luxury Designer Watch</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 3,499
-                  <small class="text-muted"><del>Rs 5,999</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 5,999</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
-                  <div class="progress-bar bg-warning" style="width: 70%"></div>
+                  <div class="progress-bar bg-danger" style="width: 70%"></div>
                 </div>
                 <small class="text-muted">Sold: 70%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <small class="text-muted">(215)</small>
+                </div>
               </div>
             </div>
           </div>
           <!-- Designer Watch Card END -->
 
           <!-- Earbuds Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="wireless-earbuds"
+          >
             <div class="product-card h-100 position-relative">
               <span
                 class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
@@ -718,46 +812,71 @@
                 src="./Images/Hot Deals/Pro Wireless Earbuds.png"
                 class="card-img-top"
                 alt="Wireless Earbuds"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Pro Wireless Earbuds</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 2,199
-                  <small class="text-muted"><del>Rs 3,499</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 3,499</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
-                  <div class="progress-bar bg-warning" style="width: 65%"></div>
+                  <div class="progress-bar bg-danger" style="width: 65%"></div>
                 </div>
                 <small class="text-muted">Sold: 65%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                  <small class="text-muted">(178)</small>
+                </div>
               </div>
             </div>
           </div>
           <!-- Earbuds Card END -->
 
           <!-- Laptop Card START -->
-          <div class="col-6 col-md-3 mb-3">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="gaming-laptop"
+          >
             <div class="product-card h-100 position-relative">
               <span
-                class="badge bg-danger text-whi position-absolute top-0 end-0 m-2"
+                class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
                 >HOT</span
               >
               <img
                 src="./Images/Hot Deals/Gaming Laptop Pro.png"
                 class="card-img-top"
                 alt="Gaming Laptop"
-                style="height: 250px"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Gaming Laptop Pro</p>
                 <p class="text-danger font-weight-bold mb-1">
                   Rs 49,999
-                  <small class="text-muted"><del>Rs 69,999</del></small>
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 69,999</del></small
+                  >
                 </p>
                 <div class="progress mt-2" style="height: 5px">
-                  <div class="progress-bar bg-warning" style="width: 55%"></div>
+                  <div class="progress-bar bg-danger" style="width: 55%"></div>
                 </div>
                 <small class="text-muted">Sold: 55%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <small class="text-muted">(142)</small>
+                </div>
               </div>
             </div>
           </div>
@@ -771,22 +890,30 @@
     <div class="container-fluid py-5">
       <div class="container">
         <h4 class="mb-3 text-danger">Best Sellers</h4>
+
         <div class="row">
           <!-- Smart Band Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="product-card h-100">
+          <div class="col-6 col-md-3 mb-4 routingButton" data-name="smart-band">
+            <div class="product-card h-100 position-relative">
               <img
                 src="./Images/Best Sellers/Smart Band 4.png"
                 class="card-img-top object-fit-cover"
-                style="height: 250px"
+                style="height: 200px"
                 alt="Smart Band"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Smart Band 4</p>
                 <p class="text-danger fw-bold mb-1">Rs 1,999</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                   <small class="text-muted">(124)</small>
                 </div>
@@ -796,20 +923,30 @@
           <!-- Smart Band Card END -->
 
           <!-- Wireless Mouse Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="product-card h-100">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="wireless-mouse"
+          >
+            <div class="product-card h-100 position-relative">
               <img
                 src="./Images/Best Sellers/Wireless Mouse.png"
                 class="card-img-top object-fit-cover"
-                style="height: 250px"
+                style="height: 200px"
                 alt="Wireless Mouse"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Wireless Mouse</p>
                 <p class="text-danger fw-bold mb-1">Rs 599</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                   <small class="text-muted">(89)</small>
                 </div>
@@ -819,20 +956,27 @@
           <!-- Wireless Mouse Card END -->
 
           <!-- Power Bank Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="product-card h-100">
+          <div class="col-6 col-md-3 mb-4 routingButton" data-name="power-bank">
+            <div class="product-card h-100 position-relative">
               <img
                 src="./Images/Best Sellers/Power Bank 10000mAh.png"
                 class="card-img-top object-fit-cover"
-                style="height: 250px"
+                style="height: 200px"
                 alt="Power Bank"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Power Bank 10000mAh</p>
                 <p class="text-danger fw-bold mb-1">Rs 799</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <small class="text-muted">(215)</small>
                 </div>
@@ -842,20 +986,30 @@
           <!-- Power Bank Card END -->
 
           <!-- Bluetooth Headset Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="product-card h-100">
+          <div
+            class="col-6 col-md-3 mb-4 routingButton"
+            data-name="bluetooth-headset"
+          >
+            <div class="product-card h-100 position-relative">
               <img
                 src="./Images/Best Sellers/Bluetooth Headset.png"
                 class="card-img-top object-fit-cover"
-                style="height: 250px"
+                style="height: 200px"
                 alt="Bluetooth Headset"
               />
-              <div class="p-3">
+              <div class="p-2">
                 <p class="mb-1 text-truncate">Bluetooth Headset</p>
                 <p class="text-danger fw-bold mb-1">Rs 1,299</p>
-                <div class="rating text-warning">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
+                <div class="rating text-warning small">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                   <small class="text-muted">(176)</small>
                 </div>
@@ -879,24 +1033,34 @@
         </div>
 
         <div class="row justforyou">
-          <!-- Sunglasses Card START -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <!-- Electronics -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="wireless-earbuds"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >30% OFF</span
+                >25% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df"
                 class="card-img-top"
-                alt="Sunglasses"
-                style="height: 150px; object-fit: cover"
+                alt="Wireless Earbuds"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Stylish Sunglasses</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Wireless Earbuds</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 190.99
-                  <small class="text-muted"><del>Rs 290.99</del></small>
+                  Rs 1,499
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 1,999</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -908,26 +1072,34 @@
               </div>
             </div>
           </div>
-          <!-- Sunglasses Card END -->
 
-          <!-- Leather Wallet Card START -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="power-bank"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >25% OFF</span
+                >30% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1622529954442-bbb14c14fd0e"
                 class="card-img-top"
-                alt="Leather Wallet"
-                style="height: 150px; object-fit: cover"
+                alt="Power Bank"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Leather Wallet</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">20,000mAh Power Bank</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 290.99
-                  <small class="text-muted"><del>Rs 390.99</del></small>
+                  Rs 999
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 1,499</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -939,26 +1111,35 @@
               </div>
             </div>
           </div>
-          <!-- Leather Wallet Card END -->
 
-          <!-- Fitness Tracker Card START -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <!-- Clothing -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="cotton-tshirt"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >29% OFF</span
+                >40% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1576243345690-4e4b79b63288?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9"
                 class="card-img-top"
-                alt="Fitness Tracker"
-                style="height: 150px; object-fit: cover"
+                alt="Cotton T-Shirt"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Fitness Tracker</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Cotton T-Shirt</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 490.99
-                  <small class="text-muted"><del>Rs 690.99</del></small>
+                  Rs 399
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 699</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -970,57 +1151,74 @@
               </div>
             </div>
           </div>
-          <!-- Fitness Tracker Card END -->
 
-          <!-- Portable Charger Card START -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="denim-jeans"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >30% OFF</span
+                >35% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1542272604-787c3835535d"
                 class="card-img-top"
-                alt="Portable Charger"
-                style="height: 150px; object-fit: cover"
+                alt="Denim Jeans"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Portable Charger</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Denim Jeans</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 240.99
-                  <small class="text-muted"><del>Rs 340.99</del></small>
+                  Rs 1,299
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 1,999</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
                   <i class="far fa-star"></i>
                   <small class="text-muted">(29)</small>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Portable Charger Card END -->
 
-          <!-- Smartphone Case Card START -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <!-- Shoes -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="sports-shoes"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >26% OFF</span
+                >30% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
                 class="card-img-top"
-                alt="Smartphone Case"
-                style="height: 150px; object-fit: cover"
+                alt="Sports Shoes"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Smartphone Case</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Sports Shoes</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 140.99
-                  <small class="text-muted"><del>Rs 190.99</del></small>
+                  Rs 2,499
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 3,599</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -1032,26 +1230,34 @@
               </div>
             </div>
           </div>
-          <!-- Smartphone Case Card END -->
 
-          <!-- Wireless Mouse Card START -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="casual-shoes"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
                 >25% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1560769629-975ec94e6a86"
                 class="card-img-top"
-                alt="Wireless Mouse"
-                style="height: 150px; object-fit: cover"
+                alt="Casual Shoes"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Wireless Mouse</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Casual Shoes</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 290.99
-                  <small class="text-muted"><del>Rs 390.99</del></small>
+                  Rs 1,799
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 2,399</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -1063,345 +1269,324 @@
               </div>
             </div>
           </div>
-          <!-- Wireless Mouse Card END -->
-          <!-- 7. Wireless Headphones -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+
+          <!-- Toys -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="lego-set"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >25% OFF</span
+                >20% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1580894741820-01fe6e556d4f?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1587654780291-39c9404d746b"
                 class="card-img-top"
-                alt="Wireless Headphones"
-                style="height: 150px; object-fit: cover"
+                alt="Lego Set"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Wireless Headphones</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Lego Building Set</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 2199.00
-                  <small class="text-muted"><del>Rs 2899.00</del></small>
+                  Rs 1,599
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 1,999</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(58)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 8. Graphic T-shirt -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="remote-car"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >20% OFF</span
+                >15% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1618354691417-cd59b1a3795c?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f"
                 class="card-img-top"
-                alt="Graphic T-shirt"
-                style="height: 150px; object-fit: cover"
+                alt="Remote Car"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Graphic T-shirt</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Remote Control Car</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 899.00
-                  <small class="text-muted"><del>Rs 1125.00</del></small>
+                  Rs 999
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 1,199</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(33)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 9. Office Chair -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <!-- Beauty -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="face-cream"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >15% OFF</span
+                >30% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1578898888121-8171c5f24c8d?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b"
                 class="card-img-top"
-                alt="Office Chair"
-                style="height: 150px; object-fit: cover"
+                alt="Face Cream"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Ergonomic Office Chair</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Vitamin C Face Cream</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 5499.00
-                  <small class="text-muted"><del>Rs 6499.00</del></small>
+                  Rs 499
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 699</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(90)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 10. Sunglasses Pouch -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="lipstick"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >10% OFF</span
+                >25% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1580327336514-8e05f7d35b14?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4f02"
                 class="card-img-top"
-                alt="Sunglasses Pouch"
-                style="height: 150px; object-fit: cover"
+                alt="Lipstick"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Sunglasses Pouch</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Matte Lipstick</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 299.00
-                  <small class="text-muted"><del>Rs 329.00</del></small>
+                  Rs 299
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 399</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(18)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 11. DSLR Lens -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <!-- Groceries -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="olive-oil"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >18% OFF</span
+                >10% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1549921296-3a5b5e90f56d?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1535591273668-578e31182c4f"
                 class="card-img-top"
-                alt="Camera Lens"
-                style="height: 150px; object-fit: cover"
+                alt="Olive Oil"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Canon DSLR Lens</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Extra Virgin Olive Oil</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 8999.00
-                  <small class="text-muted"><del>Rs 10999.00</del></small>
+                  Rs 899
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 999</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(61)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 12. Smart Water Bottle -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="basmati-rice"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >22% OFF</span
+                >15% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1610396482353-5c5de974bf31?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950"
                 class="card-img-top"
-                alt="Smart Water Bottle"
-                style="height: 150px; object-fit: cover"
+                alt="Basmati Rice"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Smart Water Bottle</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Premium Basmati Rice</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 1299.00
-                  <small class="text-muted"><del>Rs 1650.00</del></small>
+                  Rs 599
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 699</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(37)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 13. Leather Belt -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <!-- Computers -->
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="wireless-mouse"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >30% OFF</span
+                >35% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1570703030182-68b51a78c4de?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1527814050087-3793815479db"
                 class="card-img-top"
-                alt="Leather Belt"
-                style="height: 150px; object-fit: cover"
+                alt="Wireless Mouse"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Genuine Leather Belt</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">Wireless Mouse</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 799.00
-                  <small class="text-muted"><del>Rs 1149.00</del></small>
+                  Rs 699
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 999</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(44)</small>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 14. Portable Charger -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
+          <div
+            class="col-6 col-md-3 col-lg-3 mb-4 routingButton"
+            data-name="external-ssd"
+          >
             <div class="product-card h-100 position-relative">
               <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >27% OFF</span
+                >20% OFF</span
               >
               <img
-                src="https://images.unsplash.com/photo-1622529954442-bbb14c14fd0e?auto=format&fit=crop&w=500&h=500&q=80"
+                src="https://images.unsplash.com/photo-1591488320449-011701bb6704"
                 class="card-img-top"
-                alt="Portable Charger"
-                style="height: 150px; object-fit: cover"
+                alt="External SSD"
+                style="height: 200px; object-fit: cover"
               />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Portable Power Bank</h6>
+              <div class="p-2">
+                <p class="mb-1 text-truncate">1TB External SSD</p>
                 <p class="text-danger font-weight-bold mb-1">
-                  Rs 1099.00
-                  <small class="text-muted"><del>Rs 1499.00</del></small>
+                  Rs 5,999
+                  <small class="text-muted"
+                    ><del style="font-size: 12px">Rs 7,499</del></small
+                  >
                 </p>
+                <div class="progress mt-2" style="height: 5px">
+                  <div class="progress-bar bg-danger" style="width: 60%"></div>
+                </div>
+                <small class="text-muted">Sold: 60%</small>
+                <hr class="my-1" style="border-top: 1px solid #ddd" />
                 <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
                   <small class="text-muted">(50)</small>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- 15. Travel Mug -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
-            <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >19% OFF</span
-              >
-              <img
-                src="https://images.unsplash.com/photo-1587202372775-98973d98f317?auto=format&fit=crop&w=500&h=500&q=80"
-                class="card-img-top"
-                alt="Travel Mug"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Thermal Travel Mug</h6>
-                <p class="text-danger font-weight-bold mb-1">
-                  Rs 749.00
-                  <small class="text-muted"><del>Rs 925.00</del></small>
-                </p>
-                <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i><i class="far fa-star"></i>
-                  <small class="text-muted">(28)</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 16. Gaming Keyboard -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
-            <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >24% OFF</span
-              >
-              <img
-                src="https://images.unsplash.com/photo-1618060932015-bd4e3ec11472?auto=format&fit=crop&w=500&h=500&q=80"
-                class="card-img-top"
-                alt="Gaming Keyboard"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">RGB Gaming Keyboard</h6>
-                <p class="text-danger font-weight-bold mb-1">
-                  Rs 1899.00
-                  <small class="text-muted"><del>Rs 2499.00</del></small>
-                </p>
-                <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i
-                  ><i class="fas fa-star-half-alt"></i
-                  ><i class="far fa-star"></i>
-                  <small class="text-muted">(73)</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 17. Foldable Table -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
-            <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >21% OFF</span
-              >
-              <img
-                src="https://images.unsplash.com/photo-1550583724-b269b7ddf94a?auto=format&fit=crop&w=500&h=500&q=80"
-                class="card-img-top"
-                alt="Foldable Table"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">Wooden Foldable Table</h6>
-                <p class="text-danger font-weight-bold mb-1">
-                  Rs 2299.00
-                  <small class="text-muted"><del>Rs 2899.00</del></small>
-                </p>
-                <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
-                  <small class="text-muted">(39)</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 18. Mini Fan -->
-          <div class="col-6 col-md-3 col-lg-2 mb-4">
-            <div class="product-card h-100 position-relative">
-              <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-                >17% OFF</span
-              >
-              <img
-                src="https://images.unsplash.com/photo-1619598451476-0918831b07f0?auto=format&fit=crop&w=500&h=500&q=80"
-                class="card-img-top"
-                alt="Mini Fan"
-                style="height: 150px; object-fit: cover"
-              />
-              <div class="p-3">
-                <h6 class="text-truncate mb-1">USB Mini Fan</h6>
-                <p class="text-danger font-weight-bold mb-1">
-                  Rs 599.00
-                  <small class="text-muted"><del>Rs 729.00</del></small>
-                </p>
-                <div class="rating text-warning small">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="far fa-star"></i><i class="far fa-star"></i
-                  ><i class="far fa-star"></i>
-                  <small class="text-muted">(21)</small>
-                </div>
-              </div>
-          </div>
         </div>
-
+        <!-- Load More Button -->
         <div class="text-center mt-4">
           <button class="btn btn-outline-danger px-4 rounded-pill loadmore">
             LOAD MORE
