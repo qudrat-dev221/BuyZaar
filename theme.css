@@ -68,6 +68,26 @@
   display: none;
 }
 
+.cartButton {
+  position: relative;
+}
+
+.cartButton span {
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  color: red;
+  /* align-content: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 13px;
+  top: 1px;
+  font-size: 11px;
+  border-radius: 50%;
+}
+
 /* Replace your current #mobilemenu styles with these */
 .slidemenu1 {
   background-color: white;
@@ -126,6 +146,11 @@
 .product-card,
 .routingButton {
   cursor: pointer;
+}
+
+#hotdeals-countdown,
+#countdown {
+  font-size: 16px;
 }
 
 .justforyou {
