@@ -90,6 +90,10 @@
     bottom: 0px;
   }
 
+  .headerposition {
+    position: sticky;
+  }
+
   #searchBar {
     width: 50% !important;
     margin: 3%;
@@ -163,7 +167,6 @@
     width: 280px;
     transition: all 0.5s ease;
     transform: translateX(100%);
-    display: block;
   }
 
   .slidemenu2 {
@@ -174,5 +177,6 @@
     width: 280px;
     transition: all 0.5s ease;
     transform: translateX(0);
+    display: block;
   }
 }

@@ -46,9 +46,9 @@ const prepare = () => {
     });
     document.querySelector(".cart-footer span").textContent = `Rs. ${total}`;
   }
+  // Grand Total Function end
 
-  // cart work
-
+  // Toggle Navbar
   (function () {
     // Cart toggle
     document.querySelectorAll(".cartButton").forEach((icon) => {
@@ -57,6 +57,7 @@ const prepare = () => {
         cart.classList.toggle("cart-container1");
       });
     });
+    // Toggle Navbar
 
     // Quantity update
     document.querySelectorAll(".mycart").forEach((Element) => {
@@ -92,13 +93,22 @@ const prepare = () => {
       });
     });
 
+    // update cartDigits
+    const cartDigits = () => {
+      let carts = document.querySelectorAll(".cartDelete");
+      document.querySelectorAll(".cartButton span").forEach((Element) => {
+        Element.textContent = carts.length;
+      });
+    };
+    cartDigits();
     // Delete item
-    document.querySelectorAll(".btn-danger").forEach((btn) => {
+    document.querySelectorAll(".cartDelete").forEach((btn) => {
       btn.addEventListener("click", (event) => {
         let cartItem = event.target.closest(".cart-item");
         if (cartItem) {
           cartItem.remove();
           updateGrandTotal();
+          cartDigits();
         }
       });
     });
@@ -107,10 +117,11 @@ const prepare = () => {
     updateGrandTotal();
   })();
 
+  // Toggle Menu
   (() => {
     let such = true;
     let toggleButton = document.querySelector("#toggleMobile");
-    let mobileMenu = document.querySelector(".slidemenu1"); // target by class
+    let mobileMenu = document.querySelector(".slidemenu1");
 
     toggleButton.addEventListener("click", () => {
       if (such) {
@@ -121,13 +132,29 @@ const prepare = () => {
       }
 
       mobileMenu.classList.toggle("slidemenu2");
+
       such = !such;
     });
   })();
-};
 
-document.querySelectorAll(".routingButton").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    alert(event.currentTarget.dataset.name);
-  });
-});
+  // just for you more cards function
+
+  (() => {
+    const loadmoreButton = document.querySelector(".loadmore");
+    let more = true; // Initially allowed
+
+    if (loadmoreButton) {
+      loadmoreButton.addEventListener("click", (event) => {
+        if (!more) return; // Already used, do nothing
+
+        const justForYOU = document.querySelector(".justforyou");
+        const moreCards = event.currentTarget.dataset.name || "loadmore";
+
+        if (component[moreCards]) {
+          justForYOU.innerHTML += component[moreCards];
+          more = false; // Prevent future clicks
+        }
+      });
+    }
+  })();
+};
