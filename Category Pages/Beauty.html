@@ -17,46 +17,53 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="theme.css" />
+    <style>
+      .btn-cart {
+        width: 36%;
+      }
+      .btn-buy {
+        width: 63%;
+      }
+    </style>
   </head>
   <body>
-   
     <!-- Main Content -->
     <div class="container mt-4">
-      <!-- Breadcrumb -->
-    
-
       <!-- Page Header -->
       <div class="row mb-4">
         <div class="col-12">
-          <h2 class="text-danger">
-            <i class="fas fa-spa me-2"></i>Beauty 
-          </h2>
+          <h2 class="text-danger"><i class="fas fa-spa me-2"></i>Beauty</h2>
           <p class="text-muted">
             Premium beauty and skincare products at discounted prices
           </p>
         </div>
       </div>
 
-      <!-- Products Grid -->
-      <div class="row">
+      <!-- Skincare Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Skincare</h4>
+        </div>
+
         <!-- Product 1 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >30% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Vitamin C Serum"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Vitamin C Face Serum</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Vitamin C Face Serum</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 899 <small class="text-muted"><del>Rs 1,299</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -64,67 +71,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(256)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 2 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >25% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Matte Lipstick"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Matte Lipstick Set</h5>
-              <p class="text-danger fw-bold">
-                Rs 1,199 <small class="text-muted"><del>Rs 1,599</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(189)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >40% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Face Cream"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Anti-Aging Night Cream</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Anti-Aging Night Cream</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,499 <small class="text-muted"><del>Rs 2,499</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -132,135 +107,35 @@
                 <i class="fas fa-star-half-alt"></i>
                 <small class="text-muted">(142)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product 4 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >20% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Perfume"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Luxury Perfume 100ml</h5>
-              <p class="text-danger fw-bold">
-                Rs 2,999 <small class="text-muted"><del>Rs 3,799</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(321)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >15% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1608248543803-ba870f61a628?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Hair Serum"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Argan Hair Serum</h5>
-              <p class="text-danger fw-bold">
-                Rs 799 <small class="text-muted"><del>Rs 949</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <small class="text-muted">(412)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >50% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Makeup Kit"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Complete Makeup Kit</h5>
-              <p class="text-danger fw-bold">
-                Rs 3,499 <small class="text-muted"><del>Rs 6,999</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <small class="text-muted">(178)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 7 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >10% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1590153155461-0f2f6f725834?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Face Mask"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Charcoal Face Mask</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Charcoal Face Mask</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 649 <small class="text-muted"><del>Rs 729</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -268,33 +143,150 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(86)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product 8 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >25% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Face Wash"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Aloe Vera Face Wash</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 499 <small class="text-muted"><del>Rs 699</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(312)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makeup Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Makeup</h4>
+        </div>
+
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >25% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Matte Lipstick"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Matte Lipstick Set</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,199 <small class="text-muted"><del>Rs 1,599</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(189)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >50% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Makeup Kit"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Complete Makeup Kit</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 3,499 <small class="text-muted"><del>Rs 6,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(178)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >35% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1607602132700-068258944f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Nail Polish"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Nail Polish Set (6 Colors)</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Nail Polish Set (6 Colors)</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,299 <small class="text-muted"><del>Rs 1,999</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -302,20 +294,355 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(154)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >20% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Foundation"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Matte Foundation 30ml</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,599 <small class="text-muted"><del>Rs 1,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(267)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-  
+      <!-- Haircare Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Haircare</h4>
+        </div>
 
-   
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >15% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1608248543803-ba870f61a628?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Hair Serum"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Argan Hair Serum</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 799 <small class="text-muted"><del>Rs 949</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <small class="text-muted">(412)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >20% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Shampoo"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Keratin Shampoo 500ml</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,099 <small class="text-muted"><del>Rs 1,399</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(298)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >25% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1596704017256-d7c8a6eee7d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Hair Oil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Organic Hair Growth Oil</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 899 <small class="text-muted"><del>Rs 1,199</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(187)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >30% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Hair Conditioner"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Smooth Conditioner 500ml</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,199 <small class="text-muted"><del>Rs 1,699</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(223)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragrances Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Fragrances</h4>
+        </div>
+
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >20% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Perfume"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Luxury Perfume 100ml</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 2,999 <small class="text-muted"><del>Rs 3,799</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(321)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >30% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1615634262417-5c8c4a0e4b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Body Mist"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Floral Body Mist 200ml</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,299 <small class="text-muted"><del>Rs 1,899</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(143)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >15% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1615228939098-42c1f0b80ec3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Cologne"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Men's Cologne 75ml</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,699 <small class="text-muted"><del>Rs 1,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(231)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >40% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1615634262417-5c8c4a0e4b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Perfume Set"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Premium Perfume Set (3x30ml)</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 3,499 <small class="text-muted"><del>Rs 5,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(178)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -324,26 +651,24 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Add to Cart functionality
-        const addToCartButtons = document.querySelectorAll(".btn-danger");
-        addToCartButtons.forEach((button) => {
+        const cartButtons = document.querySelectorAll(".btn-outline-danger");
+        cartButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
+            const productName = productCard.querySelector("p.mb-1").textContent;
             alert(`${productName} added to cart!`);
           });
         });
 
-        // View Details functionality
-        const viewDetailsButtons = document.querySelectorAll(
-          ".btn-outline-danger"
+        // Buy Now functionality
+        const buyButtons = document.querySelectorAll(
+          ".btn-danger:not(.btn-outline-danger)"
         );
-        viewDetailsButtons.forEach((button) => {
+        buyButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
-            alert(`Showing details for ${productName}`);
+            const productName = productCard.querySelector("p.mb-1").textContent;
+            alert(`Proceeding to checkout for ${productName}`);
           });
         });
       });

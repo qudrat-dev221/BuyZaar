@@ -130,7 +130,7 @@
           </div>
 
           <!-- Cart Button -->
-          <button class="profil">
+          <button class="profil routingButton" data-name="profile">
             <i class="fa-solid fa-user text-danger"></i>
           </button>
 
@@ -143,7 +143,7 @@
           </button>
         </div>
       </div>
-      <!-- cart start -->
+      <!-- cart section start -->
       <div class="cart-container">
         <h4 class="cart-title">Shopping Cart</h4>
 
@@ -207,13 +207,51 @@
           <button class="btn proceed-btn btn-success">PROCEED</button>
         </div>
       </div>
-      <!-- cart end -->
+      <!-- cart section end -->
 
       <button id="toggleMobile">
         <i class="fa-solid fa-bars text-danger"></i>
       </button>
     </header>
     <!-- HEADER END -->
+
+     <!-- bottom navbar -->
+    <div class="d-none bottom-navbar shadow-sm">
+      <nav class="navbar bg-body-tertiary">
+        <div
+          class="container d-flex flex-nowrap justify-content-around align-items-center"
+        >
+          <!-- Logo -->
+          <div
+            id="myLogo"
+            class="navbar-brand fw-bold text-danger d-flex align-items-center"
+          >
+            <i class="fas fa-shopping-bag me-2"></i>
+            <span>BuyZaar</span>
+          </div>
+
+          <!-- Search bar -->
+          <div id="searchBar" class="searchBar">
+            <input type="text" placeholder="Search Product" id="searchInput" />
+            <button id="searchButton">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <!-- Cart button -->
+          <div>
+            <button
+              id="cartButton"
+              class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center"
+            >
+              <span>2</span>
+              <i class="fas fa-shopping-cart me-2"></i> Cart
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- bottom navbar -->
     <!-- Categories Menu Div -->
     <div
       class="h-100 bg-white shadow slidemenu1"
@@ -300,224 +338,11 @@
         </div>
       </div>
     </div>
+<!-- routing Div -->
+     <div id="app"><h1>how are you</h1></div>
 
-    <!-- HERO CAROUSEL START -->
-    <div class="container-fluid px-0">
-      <div
-        id="autoCarousel"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="4000"
-      >
-        <!-- Slides -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=400&q=80"
-              class="d-block w-100"
-              alt="Big Sale"
-            />
-            <div
-              class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
-            >
-              <h5>Mega Sale</h5>
-              <p>Upto 70% Off on All Products</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=400&q=80"
-              class="d-block w-100"
-              alt="New Arrivals"
-            />
-            <div
-              class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
-            >
-              <h5>New Arrivals</h5>
-              <p>Check Out Our Latest Collection</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=400&q=80"
-              class="d-block w-100"
-              alt="Premium Products"
-            />
-            <div
-              class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded"
-            >
-              <h5>Premium Quality</h5>
-              <p>Best Products at Affordable Prices</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#autoCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#autoCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <!-- HERO CAROUSEL END -->
-
-    <!-- bottom navbar -->
-    <div class="d-none bottom-navbar shadow-sm">
-      <nav class="navbar bg-body-tertiary">
-        <div
-          class="container d-flex flex-nowrap justify-content-around align-items-center"
-        >
-          <!-- Logo -->
-          <div
-            id="myLogo"
-            class="navbar-brand fw-bold text-danger d-flex align-items-center"
-          >
-            <i class="fas fa-shopping-bag me-2"></i>
-            <span>BuyZaar</span>
-          </div>
-
-          <!-- Search bar -->
-          <div id="searchBar" class="searchBar">
-            <input type="text" placeholder="Search Product" id="searchInput" />
-            <button id="searchButton">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-
-          <!-- Cart button -->
-          <div>
-            <button
-              id="cartButton"
-              class="cartButton btn btn-danger rounded-pill px-4 py-2 d-flex align-items-center"
-            >
-              <span>2</span>
-              <i class="fas fa-shopping-cart me-2"></i> Cart
-            </button>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <!-- bottom navbar -->
-
-    <!-- CATEGORIES SECTION START -->
-    <div class="container-fluid bg-light py-5">
-      <div class="container">
-        <h4 class="mb-4 text-danger">Shop By Categories</h4>
-        <div class="row">
-          <!-- Home Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-home category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Home</p>
-            </div>
-          </div>
-          <!-- Home Card END -->
-
-          <!-- Electronics Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-mobile-alt category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Electronics</p>
-            </div>
-          </div>
-          <!-- Electronics Card END -->
-
-          <!-- Clothing Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-tshirt category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Clothing</p>
-            </div>
-          </div>
-          <!-- Clothing Card END -->
-
-          <!-- Shoes Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-shoe-prints category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Shoes</p>
-            </div>
-          </div>
-          <!-- Shoes Card END -->
-
-          <!-- Toys Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-gamepad category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Toys</p>
-            </div>
-          </div>
-          <!-- Toys Card END -->
-
-          <!-- Beauty Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-spa category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Beauty</p>
-            </div>
-          </div>
-          <!-- Beauty Card END -->
-
-          <!-- Groceries Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-utensils category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Groceries</p>
-            </div>
-          </div>
-          <!-- Groceries Card END -->
-
-          <!-- Computers Card START -->
-          <div class="col-6 col-md-3 mb-3">
-            <div class="category-card text-center p-3">
-              <i
-                class="fas fa-laptop category-icon text-danger"
-                style="font-size: 2rem"
-              ></i>
-              <p class="mb-0 font-weight-bold text-danger mt-2">Computers</p>
-            </div>
-          </div>
-          <!-- Computers Card END -->
-        </div>
-      </div>
-    </div>
-    <!-- CATEGORIES SECTION END -->
-    <div id="app"><h1>how are you</h1></div>
+   
+   
     <!-- FLASH SALE SECTION START -->
     <div class="container-fluid py-5">
       <div class="container">

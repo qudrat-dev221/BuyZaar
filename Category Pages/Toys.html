@@ -17,22 +17,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="theme.css" />
+    <style>
+      .btn-cart {
+        width: 35%;
+      }
+      .btn-buy {
+        width: 65%;
+      }
+    </style>
   </head>
   <body>
-   
-
     <!-- Main Content -->
     <div class="container mt-4">
-      <!-- Breadcrumb -->
-    
-
       <!-- Page Header -->
       <div class="row mb-4">
         <div class="col-12">
-          <h2 class="text-danger">
-            <i class="fas fa-gamepad me-2"></i>Toys
-          </h2>
+          <h2 class="text-danger"><i class="fas fa-gamepad me-2"></i>Toys</h2>
           <p class="text-muted">
             Fun and educational toys for kids of all ages at amazing prices
           </p>
@@ -42,22 +42,24 @@
       <!-- Products Grid -->
       <div class="row">
         <!-- Product 1 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >25% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1594787319144-04b348440d6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Building Blocks"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Educational Building Blocks</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Educational Building Blocks</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,299 <small class="text-muted"><del>Rs 1,799</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -65,33 +67,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(156)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 2 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >30% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Remote Control Car"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Remote Control Car</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Remote Control Car</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,999 <small class="text-muted"><del>Rs 2,899</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -99,33 +103,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(128)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 3 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >40% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1594787319144-04b348440d6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Doll House"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Princess Doll House</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Princess Doll House</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 2,499 <small class="text-muted"><del>Rs 4,199</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -133,33 +139,35 @@
                 <i class="fas fa-star-half-alt"></i>
                 <small class="text-muted">(98)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 4 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >20% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Puzzle Game"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">3D Wooden Puzzle</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">3D Wooden Puzzle</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 899 <small class="text-muted"><del>Rs 1,199</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -167,33 +175,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(210)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 5 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >15% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Stuffed Teddy Bear"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Giant Teddy Bear</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Giant Teddy Bear</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,599 <small class="text-muted"><del>Rs 1,899</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -201,33 +211,35 @@
                 <i class="fas fa-star"></i>
                 <small class="text-muted">(342)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 6 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >50% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="LEGO Set"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">LEGO Creative Box</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">LEGO Creative Box</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 2,999 <small class="text-muted"><del>Rs 5,999</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -235,33 +247,35 @@
                 <i class="fas fa-star-half-alt"></i>
                 <small class="text-muted">(187)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 7 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >10% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1589874186480-ecd085096d68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Science Kit"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Science Experiment Kit</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Science Experiment Kit</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,799 <small class="text-muted"><del>Rs 1,999</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -269,33 +283,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(76)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 8 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >35% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Musical Toy"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Musical Keyboard Toy</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Musical Keyboard Toy</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 1,499 <small class="text-muted"><del>Rs 2,299</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -303,20 +319,17 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(134)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-  
-
-   
+    </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -325,26 +338,24 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Add to Cart functionality
-        const addToCartButtons = document.querySelectorAll(".btn-danger");
-        addToCartButtons.forEach((button) => {
+        const cartButtons = document.querySelectorAll(".btn-outline-danger");
+        cartButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
+            const productName = productCard.querySelector("p.mb-1").textContent;
             alert(`${productName} added to cart!`);
           });
         });
 
-        // View Details functionality
-        const viewDetailsButtons = document.querySelectorAll(
-          ".btn-outline-danger"
+        // Buy Now functionality
+        const buyButtons = document.querySelectorAll(
+          ".btn-danger:not(.btn-outline-danger)"
         );
-        viewDetailsButtons.forEach((button) => {
+        buyButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
-            alert(`Showing details for ${productName}`);
+            const productName = productCard.querySelector("p.mb-1").textContent;
+            alert(`Proceeding to checkout for ${productName}`);
           });
         });
       });

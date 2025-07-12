@@ -17,7 +17,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="theme.css" />
+    <style>
+      .btn-cart {
+        width: 35%;
+      }
+      .btn-buy {
+        width: 65%;
+      }
+    </style>
   </head>
   <body>
     <!-- Main Content -->
@@ -34,25 +41,31 @@
         </div>
       </div>
 
-      <!-- Products Grid -->
-      <div class="row">
+      <!-- Mobile Devices Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Mobile Devices</h4>
+        </div>
+
         <!-- Product 1 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >20% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Smartphone"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Premium Smartphone</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Premium Smartphone</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 24,999 <small class="text-muted"><del>Rs 31,999</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -60,33 +73,35 @@
                 <i class="fas fa-star-half-alt"></i>
                 <small class="text-muted">(128)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 2 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >15% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Smart Watch"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Smart Watch Pro</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Smart Watch Pro</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 5,999 <small class="text-muted"><del>Rs 6,999</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -94,203 +109,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(95)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 3 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >30% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Wireless Headphones"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Wireless Headphones</h5>
-              <p class="text-danger fw-bold">
-                Rs 2,499 <small class="text-muted"><del>Rs 3,499</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <small class="text-muted">(210)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >25% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Wireless Earbuds"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Wireless Earbuds</h5>
-              <p class="text-danger fw-bold">
-                Rs 3,199 <small class="text-muted"><del>Rs 4,199</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <small class="text-muted">(176)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >10% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Wireless Charger"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Wireless Charger</h5>
-              <p class="text-danger fw-bold">
-                Rs 1,799 <small class="text-muted"><del>Rs 1,999</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(84)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >40% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Bluetooth Speaker"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Bluetooth Speaker</h5>
-              <p class="text-danger fw-bold">
-                Rs 3,599 <small class="text-muted"><del>Rs 5,999</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <small class="text-muted">(142)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 7 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >18% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Power Bank"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Power Bank 20,000mAh</h5>
-              <p class="text-danger fw-bold">
-                Rs 2,499 <small class="text-muted"><del>Rs 2,999</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(112)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 8 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >12% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="4K Camera"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">4K Action Camera</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">4K Action Camera</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 8,999 <small class="text-muted"><del>Rs 10,199</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -298,11 +145,198 @@
                 <i class="fas fa-star"></i>
                 <small class="text-muted">(205)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >18% OFF</span
+            >
+            <img
+              src=""
+              class="card-img-top"
+              alt="Power Bank"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Power Bank 20,000mAh</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 2,499 <small class="text-muted"><del>Rs 2,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(112)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audio Devices Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Audio Devices</h4>
+        </div>
+
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >30% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Wireless Headphones"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Wireless Headphones</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 2,499 <small class="text-muted"><del>Rs 3,499</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <small class="text-muted">(210)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >25% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Wireless Earbuds"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Wireless Earbuds</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 3,199 <small class="text-muted"><del>Rs 4,199</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(176)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >40% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Bluetooth Speaker"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Bluetooth Speaker</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 3,599 <small class="text-muted"><del>Rs 5,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(142)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >10% OFF</span
+            >
+            <img
+              src=""
+              class="card-img-top"
+              alt="Wireless Charger"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Wireless Charger</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,799 <small class="text-muted"><del>Rs 1,999</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(84)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
@@ -317,26 +351,24 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Add to Cart functionality
-        const addToCartButtons = document.querySelectorAll(".btn-danger");
-        addToCartButtons.forEach((button) => {
+        const cartButtons = document.querySelectorAll(".btn-outline-danger");
+        cartButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
+            const productName = productCard.querySelector("p.mb-1").textContent;
             alert(`${productName} added to cart!`);
           });
         });
 
-        // View Details functionality
-        const viewDetailsButtons = document.querySelectorAll(
-          ".btn-outline-danger"
+        // Buy Now functionality
+        const buyButtons = document.querySelectorAll(
+          ".btn-danger:not(.btn-outline-danger)"
         );
-        viewDetailsButtons.forEach((button) => {
+        buyButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
-            alert(`Showing details for ${productName}`);
+            const productName = productCard.querySelector("p.mb-1").textContent;
+            alert(`Proceeding to checkout for ${productName}`);
           });
         });
       });

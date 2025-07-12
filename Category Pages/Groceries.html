@@ -17,15 +17,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="theme.css" />
+    <style>
+      .btn-cart {
+        width: 35%;
+      }
+      .btn-buy {
+        width: 65%;
+      }
+    </style>
   </head>
   <body>
-   
     <!-- Main Content -->
     <div class="container mt-4">
-      <!-- Breadcrumb -->
-    
-
       <!-- Page Header -->
       <div class="row mb-4">
         <div class="col-12">
@@ -38,25 +41,31 @@
         </div>
       </div>
 
-      <!-- Products Grid -->
-      <div class="row">
+      <!-- Staples Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Staples</h4>
+        </div>
+
         <!-- Product 1 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >20% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Basmati Rice"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Premium Basmati Rice 5kg</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Premium Basmati Rice 5kg</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 499 <small class="text-muted"><del>Rs 625</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -64,33 +73,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(356)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 2 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >15% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1611250282006-4484dd3fba6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Wheat Flour"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Whole Wheat Flour 5kg</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Whole Wheat Flour 5kg</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 299 <small class="text-muted"><del>Rs 349</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -98,67 +109,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(289)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 3 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >30% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Olive Oil"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Extra Virgin Olive Oil 1L</h5>
-              <p class="text-danger fw-bold">
-                Rs 899 <small class="text-muted"><del>Rs 1,299</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <small class="text-muted">(142)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >10% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1586201375761-83865001e1ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Sugar"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Pure Cane Sugar 5kg</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Pure Cane Sugar 5kg</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 249 <small class="text-muted"><del>Rs 279</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -166,101 +145,35 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(421)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product 5 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >25% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1594282486552-9d7a0e6b0a2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Pulses"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Mixed Pulses Combo 5kg</h5>
-              <p class="text-danger fw-bold">
-                Rs 599 <small class="text-muted"><del>Rs 799</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <small class="text-muted">(312)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >40% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1615486515464-70d6b4458331?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Honey"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Pure Forest Honey 500g</h5>
-              <p class="text-danger fw-bold">
-                Rs 399 <small class="text-muted"><del>Rs 665</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <small class="text-muted">(178)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 7 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >5% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Salt"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Iodized Salt 1kg</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Iodized Salt 1kg</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 29 <small class="text-muted"><del>Rs 31</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -268,33 +181,150 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(486)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cooking Essentials Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Cooking Essentials</h4>
+        </div>
+
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >30% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1535598730777-e5d9a8bf5de9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Olive Oil"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Extra Virgin Olive Oil 1L</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 899 <small class="text-muted"><del>Rs 1,299</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(142)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product 8 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <!-- Product 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >25% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Pulses"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Mixed Pulses Combo 5kg</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 599 <small class="text-muted"><del>Rs 799</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <small class="text-muted">(312)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >40% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Honey"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Pure Forest Honey 500g</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 399 <small class="text-muted"><del>Rs 665</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(178)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >35% OFF</span
             >
             <img
-              src="https://images.unsplash.com/photo-1615485296272-12a357dbb8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Spices"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Premium Spices Combo</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Premium Spices Combo</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 699 <small class="text-muted"><del>Rs 1,075</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -302,20 +332,17 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(254)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-  
-
-   
+    </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -324,26 +351,24 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Add to Cart functionality
-        const addToCartButtons = document.querySelectorAll(".btn-danger");
-        addToCartButtons.forEach((button) => {
+        const cartButtons = document.querySelectorAll(".btn-outline-danger");
+        cartButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
+            const productName = productCard.querySelector("p.mb-1").textContent;
             alert(`${productName} added to cart!`);
           });
         });
 
-        // View Details functionality
-        const viewDetailsButtons = document.querySelectorAll(
-          ".btn-outline-danger"
+        // Buy Now functionality
+        const buyButtons = document.querySelectorAll(
+          ".btn-danger:not(.btn-outline-danger)"
         );
-        viewDetailsButtons.forEach((button) => {
+        buyButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
-            alert(`Showing details for ${productName}`);
+            const productName = productCard.querySelector("p.mb-1").textContent;
+            alert(`Proceeding to checkout for ${productName}`);
           });
         });
       });

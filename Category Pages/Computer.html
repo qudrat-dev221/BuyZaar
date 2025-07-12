@@ -17,15 +17,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="theme.css" />
+    <style>
+      .btn-cart {
+        width: 35%;
+      }
+      .btn-buy {
+        width: 65%;
+      }
+    </style>
   </head>
   <body>
-   
     <!-- Main Content -->
     <div class="container mt-4">
-      <!-- Breadcrumb -->
-    
-
       <!-- Page Header -->
       <div class="row mb-4">
         <div class="col-12">
@@ -38,25 +41,32 @@
         </div>
       </div>
 
-      <!-- Products Grid -->
-      <div class="row">
+      <!-- Laptops Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Laptops</h4>
+        </div>
+
         <!-- Product 1 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >15% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Gaming Laptop"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Pro Gaming Laptop</h5>
-              <p class="text-danger fw-bold">
-                Rs 89,999 <small class="text-muted"><del>Rs 1,05,999</del></small>
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Pro Gaming Laptop</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 89,999
+                <small class="text-muted"><del>Rs 1,05,999</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -64,67 +74,35 @@
                 <i class="fas fa-star-half-alt"></i>
                 <small class="text-muted">(428)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Product 2 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >10% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1527430253228-e93688616381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="All-in-One PC"
-            />
-            <div class="card-body">
-              <h5 class="card-title">All-in-One Desktop PC</h5>
-              <p class="text-danger fw-bold">
-                Rs 54,999 <small class="text-muted"><del>Rs 61,099</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(312)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >25% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Ultrabook"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Ultra Thin Notebook</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Ultra Thin Notebook</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 65,499 <small class="text-muted"><del>Rs 87,299</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -132,135 +110,36 @@
                 <i class="fas fa-star"></i>
                 <small class="text-muted">(198)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product 4 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >30% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Gaming Desktop"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Gaming Desktop PC</h5>
-              <p class="text-danger fw-bold">
-                Rs 1,24,999 <small class="text-muted"><del>Rs 1,78,499</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <small class="text-muted">(156)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >12% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1593640408182-31c228c5b044?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Workstation"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Professional Workstation</h5>
-              <p class="text-danger fw-bold">
-                Rs 1,49,999 <small class="text-muted"><del>Rs 1,70,399</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(87)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
-              >20% OFF</span
-            >
-            <img
-              src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
-              class="card-img-top"
-              alt="Chromebook"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Premium Chromebook</h5>
-              <p class="text-danger fw-bold">
-                Rs 32,999 <small class="text-muted"><del>Rs 41,249</del></small>
-              </p>
-              <div class="rating text-warning mb-2">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-                <small class="text-muted">(243)</small>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 7 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >18% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Macbook"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Apple MacBook Pro</h5>
-              <p class="text-danger fw-bold">
-                Rs 1,39,999 <small class="text-muted"><del>Rs 1,70,699</del></small>
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Apple MacBook Pro</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,39,999
+                <small class="text-muted"><del>Rs 1,70,699</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -268,33 +147,188 @@
                 <i class="fas fa-star"></i>
                 <small class="text-muted">(512)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Product 8 -->
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="card h-100 product-card">
-            <span class="badge bg-danger position-absolute top-0 end-0 m-2"
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >20% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Chromebook"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Premium Chromebook</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 32,999 <small class="text-muted"><del>Rs 41,249</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(243)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop PCs Subcategory -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h4 class="text-danger pb-2">Desktop PCs</h4>
+        </div>
+
+        <!-- Product 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >10% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1527430253228-e93688616381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="All-in-One PC"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">All-in-One Desktop PC</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 54,999 <small class="text-muted"><del>Rs 61,099</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(312)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >30% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Gaming Desktop"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Gaming Desktop PC</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,24,999
+                <small class="text-muted"><del>Rs 1,78,499</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <small class="text-muted">(156)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
+              >12% OFF</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1593640408182-31c228c5b044?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
+              class="card-img-top"
+              alt="Workstation"
+              style="height: 200px; object-fit: cover"
+            />
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Professional Workstation</p>
+              <p class="text-danger font-weight-bold mb-1">
+                Rs 1,49,999
+                <small class="text-muted"><del>Rs 1,70,399</del></small>
+              </p>
+              <div class="rating text-warning small mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <small class="text-muted">(87)</small>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="product-card h-100 position-relative">
+            <span
+              class="badge bg-danger text-white position-absolute top-0 end-0 m-2"
               >5% OFF</span
             >
             <img
               src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=300&q=80"
               class="card-img-top"
               alt="Mini PC"
+              style="height: 200px; object-fit: cover"
             />
-            <div class="card-body">
-              <h5 class="card-title">Compact Mini PC</h5>
-              <p class="text-danger fw-bold">
+            <div class="p-2">
+              <p class="mb-1 text-truncate">Compact Mini PC</p>
+              <p class="text-danger font-weight-bold mb-1">
                 Rs 42,999 <small class="text-muted"><del>Rs 45,299</del></small>
               </p>
-              <div class="rating text-warning mb-2">
+              <div class="rating text-warning small mb-2">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -302,16 +336,17 @@
                 <i class="far fa-star"></i>
                 <small class="text-muted">(176)</small>
               </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-danger btn-sm">Add to Cart</button>
-                <button class="btn btn-outline-danger btn-sm">
-                  View Details
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-sm btn-outline-danger btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
                 </button>
+                <button class="btn btn-sm btn-danger btn-buy">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -320,26 +355,24 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Add to Cart functionality
-        const addToCartButtons = document.querySelectorAll(".btn-danger");
-        addToCartButtons.forEach((button) => {
+        const cartButtons = document.querySelectorAll(".btn-outline-danger");
+        cartButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
+            const productName = productCard.querySelector("p.mb-1").textContent;
             alert(`${productName} added to cart!`);
           });
         });
 
-        // View Details functionality
-        const viewDetailsButtons = document.querySelectorAll(
-          ".btn-outline-danger"
+        // Buy Now functionality
+        const buyButtons = document.querySelectorAll(
+          ".btn-danger:not(.btn-outline-danger)"
         );
-        viewDetailsButtons.forEach((button) => {
+        buyButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const productCard = this.closest(".product-card");
-            const productName =
-              productCard.querySelector(".card-title").textContent;
-            alert(`Showing details for ${productName}`);
+            const productName = productCard.querySelector("p.mb-1").textContent;
+            alert(`Proceeding to checkout for ${productName}`);
           });
         });
       });

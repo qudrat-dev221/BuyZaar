@@ -162,7 +162,7 @@
 .cart-container {
   width: 100%;
   max-width: 600px;
-  height: 80vh;
+  max-height: 80vh;
   overflow: auto;
   background-color: white;
   margin: 0 auto;

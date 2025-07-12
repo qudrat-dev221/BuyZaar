@@ -18,6 +18,7 @@ fetch("components.json")
         alert("bye");
         let eventName = e.target.dataset.name;
         let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
+        containerDiv.innerHTML = "";
         containerDiv.innerHTML = html;
         history.pushState({ page: eventName }, "", `?page=${eventName}`);
       });
