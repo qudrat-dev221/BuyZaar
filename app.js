@@ -15,6 +15,7 @@ fetch("components.json")
     // Button click
     document.querySelectorAll(".routingButton").forEach((btn) => {
       btn.addEventListener("click", (e) => {
+        alert("bye");
         let eventName = e.target.dataset.name;
         let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
         containerDiv.innerHTML = html;
@@ -141,7 +142,7 @@ const prepare = () => {
 
   (() => {
     const loadmoreButton = document.querySelector(".loadmore");
-    let more = true; // Initially allowed
+    let more = true;
 
     if (loadmoreButton) {
       loadmoreButton.addEventListener("click", (event) => {
@@ -152,9 +153,84 @@ const prepare = () => {
 
         if (component[moreCards]) {
           justForYOU.innerHTML += component[moreCards];
-          more = false; // Prevent future clicks
+          more = false;
         }
       });
     }
-  })();
+  })(); // just for you more cards function end
+
+  // Flash sale countdown
+  function updateCountdown() {
+    const countdownElement = document.getElementById("countdown");
+    let time = countdownElement.textContent.split(":");
+    let hours = parseInt(time[0]);
+    let minutes = parseInt(time[1]);
+    let seconds = parseInt(time[2]);
+
+    seconds--;
+
+    if (seconds < 0) {
+      seconds = 59;
+      minutes--;
+    }
+
+    if (minutes < 0) {
+      minutes = 59;
+      hours--;
+    }
+
+    if (hours < 0) {
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+    }
+
+    countdownElement.textContent = `${hours
+      .toString()
+      .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")}`;
+  }
+
+  // Hot deals countdown
+  function updateHotDealsCountdown() {
+    const countdownElement = document.getElementById("hotdeals-countdown");
+    let time = countdownElement.textContent.split(":");
+    let hours = parseInt(time[0]);
+    let minutes = parseInt(time[1]);
+    let seconds = parseInt(time[2]);
+
+    seconds--;
+
+    if (seconds < 0) {
+      seconds = 59;
+      minutes--;
+    }
+
+    if (minutes < 0) {
+      minutes = 59;
+      hours--;
+    }
+
+    if (hours < 0) {
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+    }
+
+    countdownElement.textContent = `${hours
+      .toString()
+      .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")}`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  setInterval(updateHotDealsCountdown, 1000);
 };
+
+document.querySelectorAll(".routingButton").forEach((element) => {
+  element.addEventListener("click", () => {
+    alert("hi");
+  });
+});
