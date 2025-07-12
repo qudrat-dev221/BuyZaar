@@ -18,7 +18,6 @@ fetch("components.json")
         alert("bye");
         let eventName = e.target.dataset.name;
         let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
-        containerDiv.innerHTML = "";
         containerDiv.innerHTML = html;
         history.pushState({ page: eventName }, "", `?page=${eventName}`);
       });
@@ -140,22 +139,29 @@ const prepare = () => {
   })();
 
   // just for you more cards function
-
   (() => {
     const loadmoreButton = document.querySelector(".loadmore");
-    let more = true;
+    let isVisible = false;
 
     if (loadmoreButton) {
-      loadmoreButton.addEventListener("click", (event) => {
-        if (!more) return; // Already used, do nothing
+      loadmoreButton.addEventListener("click", () => {
+        const cards = document.querySelectorAll(".ghum");
 
-        const justForYOU = document.querySelector(".justforyou");
-        const moreCards = event.currentTarget.dataset.name || "loadmore";
-
-        if (component[moreCards]) {
-          justForYOU.innerHTML += component[moreCards];
-          more = false;
+        if (!isVisible) {
+          // Show cards
+          cards.forEach((card) => {
+            card.style.display = "block";
+          });
+          loadmoreButton.textContent = "HIDE";
+        } else {
+          // Hide cards
+          cards.forEach((card) => {
+            card.style.display = "none";
+          });
+          loadmoreButton.textContent = "LOAD MORE";
         }
+
+        isVisible = !isVisible;
       });
     }
   })(); // just for you more cards function end
