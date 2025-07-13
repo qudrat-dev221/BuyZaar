@@ -15,8 +15,8 @@ fetch("components.json")
     // Button click
     document.querySelectorAll(".routingButton").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        alert("bye");
-        let eventName = e.target.dataset.name;
+        let eventName = e.currentTarget.dataset.name;
+        alert(eventName);
         let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
         containerDiv.innerHTML = html;
         history.pushState({ page: eventName }, "", `?page=${eventName}`);
@@ -236,8 +236,8 @@ const prepare = () => {
   setInterval(updateHotDealsCountdown, 1000);
 };
 
-document.querySelectorAll(".routingButton").forEach((element) => {
-  element.addEventListener("click", () => {
-    alert("hi");
-  });
-});
+// document.querySelectorAll(".routingButton").forEach((element) => {
+//   element.addEventListener("click", () => {
+//     alert("hi");
+//   });
+// });
