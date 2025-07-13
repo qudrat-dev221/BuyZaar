@@ -18,12 +18,13 @@ fetch("components.json")
   });
 
 // Event delegation for dynamically loaded routing buttons
-containerDiv.addEventListener("click", (e) => {
+document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
     if (!eventName) return;
     let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
+    containerDiv.innerHTML = "";
     containerDiv.innerHTML = html;
     history.pushState({ page: eventName }, "", `?page=${eventName}`);
     prepare();
@@ -145,8 +146,11 @@ const prepare = () => {
       });
     }
   })();
+};
 
-  // Flash sale countdown
+// Count Down Functions
+
+(() => {
   function updateCountdown(id) {
     const countdownElement = document.getElementById(id);
     if (!countdownElement) return;
@@ -180,4 +184,4 @@ const prepare = () => {
 
   setInterval(() => updateCountdown("countdown"), 1000);
   setInterval(() => updateCountdown("hotdeals-countdown"), 1000);
-};
+})();

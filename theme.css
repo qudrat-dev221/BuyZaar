@@ -260,3 +260,10 @@
 .ghum {
   display: none;
 }
+
+.btn-cart {
+  width: 36%;
+}
+.btn-buy {
+  width: 63%;
+}
