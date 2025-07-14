@@ -161,24 +161,21 @@
     display: block;
   }
 
+  /* Slide menu base (hidden state) */
   .slidemenu1 {
     background-color: white;
-    position: absolute;
-    right: 0px;
-    height: 100vh;
+    position: fixed;
+    right: 0;
+    min-height: 75vh;
     width: 280px;
-    transition: all 0.5s ease;
+    overflow: auto;
+    transition: transform 0.5s ease;
     transform: translateX(100%);
+    z-index: 999;
+    display: block;
   }
 
-  .slidemenu2 {
-    background-color: white;
-    position: fixed;
-    right: 0px;
-    height: 100vh;
-    width: 280px;
-    transition: all 0.5s ease;
+  .slidemenu1.slidemenu2 {
     transform: translateX(0);
-    display: block;
   }
 }

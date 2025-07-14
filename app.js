@@ -22,6 +22,7 @@ document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
+    alert(eventName);
     if (!eventName) return;
     let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
     containerDiv.innerHTML = "";
@@ -40,7 +41,43 @@ window.onpopstate = (event) => {
   prepare();
 };
 
-const prepare = () => {
+const prepare = () => {};
+
+// Toggle Menu
+(() => {
+  let isOpen = false;
+  let toggleButton = document.querySelector("#toggleMobile");
+  let mobileMenu = document.querySelector(".slidemenu1");
+
+  if (toggleButton && mobileMenu) {
+    // Toggle button click
+    toggleButton.addEventListener("click", () => {
+      isOpen = !isOpen;
+
+      // Toggle icon
+      toggleButton.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark text-danger"></i>'
+        : '<i class="fa-solid fa-bars text-danger"></i>';
+
+      // Toggle menu visibility
+      if (isOpen) {
+        mobileMenu.classList.add("slidemenu2");
+      } else {
+        mobileMenu.classList.remove("slidemenu2");
+      }
+    });
+
+    // Click on the slide menu itself to close it
+    mobileMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("slidemenu2");
+      toggleButton.innerHTML = '<i class="fa-solid fa-bars text-danger"></i>';
+      isOpen = false;
+    });
+  }
+})();
+
+// cart work here
+const cartFuctions = () => {
   // Grand Total Function
   function updateGrandTotal() {
     let total = 0;
@@ -109,44 +146,9 @@ const prepare = () => {
 
   // Initial grand total
   updateGrandTotal();
-
-  // Toggle Menu
-  (() => {
-    let such = true;
-    let toggleButton = document.querySelector("#toggleMobile");
-    let mobileMenu = document.querySelector(".slidemenu1");
-
-    if (toggleButton && mobileMenu) {
-      toggleButton.addEventListener("click", () => {
-        toggleButton.innerHTML = such
-          ? '<i class="fa-solid fa-xmark text-danger"></i>'
-          : '<i class="fa-solid fa-bars text-danger"></i>';
-
-        mobileMenu.classList.toggle("slidemenu2");
-        such = !such;
-      });
-    }
-  })();
-
-  // Just for you more cards function
-  (() => {
-    const loadmoreButton = document.querySelector(".loadmore");
-    let isVisible = false;
-
-    if (loadmoreButton) {
-      loadmoreButton.addEventListener("click", () => {
-        const cards = document.querySelectorAll(".ghum");
-
-        cards.forEach((card) => {
-          card.style.display = isVisible ? "none" : "block";
-        });
-
-        loadmoreButton.textContent = isVisible ? "LOAD MORE" : "HIDE";
-        isVisible = !isVisible;
-      });
-    }
-  })();
 };
+
+cartFuctions();
 
 // Count Down Functions
 
@@ -184,4 +186,23 @@ const prepare = () => {
 
   setInterval(() => updateCountdown("countdown"), 1000);
   setInterval(() => updateCountdown("hotdeals-countdown"), 1000);
+})();
+
+// Just for you more cards function
+(() => {
+  const loadmoreButton = document.querySelector(".loadmore");
+  let isVisible = false;
+
+  if (loadmoreButton) {
+    loadmoreButton.addEventListener("click", () => {
+      const cards = document.querySelectorAll(".ghum");
+
+      cards.forEach((card) => {
+        card.style.display = isVisible ? "none" : "block";
+      });
+
+      loadmoreButton.textContent = isVisible ? "LOAD MORE" : "HIDE";
+      isVisible = !isVisible;
+    });
+  }
 })();
