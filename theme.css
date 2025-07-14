@@ -260,9 +260,6 @@
   display: none;
 }
 
-.btn-cart {
-  width: 36%;
-}
-.btn-buy {
-  width: 63%;
+#app {
+  transition: all 1s ease;
 }

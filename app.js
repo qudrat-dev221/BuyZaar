@@ -22,11 +22,16 @@ document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
-    alert(eventName);
+    // alert(eventName);
     if (!eventName) return;
     let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
     containerDiv.innerHTML = "";
     containerDiv.innerHTML = html;
+    prepare();
+    // containerDiv.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    // });
     history.pushState({ page: eventName }, "", `?page=${eventName}`);
     prepare();
   }
