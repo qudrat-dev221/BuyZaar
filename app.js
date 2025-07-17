@@ -10,7 +10,6 @@ fetch("components.json")
     let urlParams = new URLSearchParams(window.location.search);
     let page = urlParams.get("page") || "home";
     containerDiv.innerHTML = component[page] || "<h2>404 - Page Not Found</h2>";
-    prepare();
   })
   .catch((err) => {
     containerDiv.innerHTML = "<h2>Something went wrong while loading!</h2>";
@@ -22,18 +21,19 @@ document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
+    alert(eventName);
     // alert(eventName);
     if (!eventName) return;
-    let html = component[eventName] || "<h2>404 - Page Not Found</h2>";
+    let html = component[eventName];
     containerDiv.innerHTML = "";
     containerDiv.innerHTML = html;
-    prepare();
-    // containerDiv.scrollIntoView({
-    //   behavior: "smooth",
-    //   block: "start",
-    // });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
     history.pushState({ page: eventName }, "", `?page=${eventName}`);
-    prepare();
   }
 });
 
@@ -43,10 +43,7 @@ window.onpopstate = (event) => {
   let page = event.state?.page || urlParams.get("page") || "home";
   let html = component[page] || "<h2>404 - Page Not Found</h2>";
   containerDiv.innerHTML = html;
-  prepare();
 };
-
-const prepare = () => {};
 
 // Toggle Menu
 (() => {
@@ -211,3 +208,72 @@ cartFuctions();
     });
   }
 })();
+
+// product page logic start
+document.body.addEventListener("click", (e) => {
+  // Increase Qty
+  if (e.target.closest("#increase")) {
+    const qty = e.target.closest(".qty-box")?.querySelector("#quantity");
+    const price = document.getElementById("unitPrice");
+    const total = document.getElementById("totalPrice");
+
+    if (qty && price && total) {
+      qty.value = parseInt(qty.value) + 1;
+      total.textContent = (
+        parseFloat(price.textContent.replace(/[^0-9.]/g, "")) * qty.value
+      ).toFixed(2);
+    }
+  }
+
+  // Decrease Qty
+  if (e.target.closest("#decrease")) {
+    const qty = e.target.closest(".qty-box")?.querySelector("#quantity");
+    const price = document.getElementById("unitPrice");
+    const total = document.getElementById("totalPrice");
+
+    if (qty && price && total && parseInt(qty.value) > 1) {
+      qty.value = parseInt(qty.value) - 1;
+      total.textContent = (
+        parseFloat(price.textContent.replace(/[^0-9.]/g, "")) * qty.value
+      ).toFixed(2);
+    }
+  }
+
+  // Submit Review
+  if (e.target.id === "submitReview") {
+    const name = document.getElementById("reviewerName")?.value.trim();
+    const comment = document.getElementById("userComment")?.value.trim();
+    const rating = document.getElementById("userRating")?.value;
+
+    if (!name || !comment) return alert("Name aur comment likho!");
+
+    const letter = name[0].toUpperCase();
+    const colors = ["bg-danger", "bg-success", "bg-warning", "bg-info"];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const date = new Date().toLocaleDateString();
+
+    const div = document.createElement("div");
+    div.className = "review-card";
+    div.innerHTML = `
+      <div class="d-flex mb-3">
+        <div class="me-3">
+          <div class="review-avatar ${color}">${letter}</div>
+        </div>
+        <div>
+          <h6 class="mb-1">${name} <small class="text-muted">· ${date}</small></h6>
+          <div class="text-warning mb-1">
+            ${'<i class="fas fa-star"></i>'.repeat(rating)}
+            ${'<i class="far fa-star"></i>'.repeat(5 - rating)}
+          </div>
+          <p class="mb-0 text-dark">${comment}</p>
+        </div>
+      </div>`;
+
+    document.getElementById("reviewsList")?.prepend(div);
+
+    document.getElementById("reviewerName").value = "";
+    document.getElementById("userComment").value = "";
+    document.getElementById("userRating").value = "5";
+    alert("Review submitted!");
+  }
+});
