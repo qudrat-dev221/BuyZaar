@@ -21,7 +21,7 @@ document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
-    alert(eventName);
+    // alert(eventName);
     // alert(eventName);
     if (!eventName) return;
     let html = component[eventName];
@@ -275,5 +275,31 @@ document.body.addEventListener("click", (e) => {
     document.getElementById("userComment").value = "";
     document.getElementById("userRating").value = "5";
     alert("Review submitted!");
+  }
+});
+
+// send data to card on button click
+
+document.body.addEventListener("click", function (e) {
+  if (
+    e.target.closest(".btn-danger") &&
+    e.target.closest(".btn-danger").textContent.includes("Add to Cart")
+  ) {
+    // Yahan tum localStorage me data save kar sakte ho
+    // Example:
+    const title = document.querySelector("h2.text-danger").textContent;
+    const price = document.getElementById("unitPrice").textContent;
+    const quantity = document.getElementById("quantity").value;
+
+    const cartItem = {
+      title: title,
+      price: price,
+      quantity: quantity,
+    };
+
+    // Get existing cart from localStorage or empty array
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
 });
