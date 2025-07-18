@@ -1,6 +1,8 @@
+// Global variables
 let component = {};
 let containerDiv = document.querySelector("#app");
 
+// 1. Initial Page Load Functionality
 fetch("components.json")
   .then((res) => res.json())
   .then((res) => {
@@ -16,13 +18,13 @@ fetch("components.json")
     console.error(err);
   });
 
+// 2. Routing Functionality
 // Event delegation for dynamically loaded routing buttons
 document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
-    // alert(eventName);
-    // alert(eventName);
+    alert(eventName);
     if (!eventName) return;
     let html = component[eventName];
     containerDiv.innerHTML = "";
@@ -45,7 +47,7 @@ window.onpopstate = (event) => {
   containerDiv.innerHTML = html;
 };
 
-// Toggle Menu
+// 3. Mobile Menu Toggle Functionality
 (() => {
   let isOpen = false;
   let toggleButton = document.querySelector("#toggleMobile");
@@ -78,29 +80,30 @@ window.onpopstate = (event) => {
   }
 })();
 
-// cart work here
-const cartFuctions = () => {
-  // Grand Total Function
-  function updateGrandTotal() {
-    let total = 0;
-    document.querySelectorAll(".total-col strong").forEach((el) => {
-      total += parseInt(el.textContent.replace("Rs. ", ""));
-    });
-    let footer = document.querySelector(".cart-footer span");
-    if (footer) footer.textContent = `Rs. ${total}`;
-  }
+// 4. Cart Functionality
 
-  // Toggle Navbar
-  (() => {
-    document.querySelectorAll(".cartButton").forEach((icon) => {
-      icon.addEventListener("click", () => {
-        let cart = document.querySelector(".cart-container");
-        if (cart) cart.classList.toggle("cart-container1");
-      });
-    });
-  })();
+// Grand Total Function
+function updateGrandTotal() {
+  let total = 0;
+  document.querySelectorAll(".total-col strong").forEach((el) => {
+    total += parseInt(el.textContent.replace("Rs. ", ""));
+  });
+  let footer = document.querySelector(".cart-footer span");
+  if (footer) footer.textContent = `Rs. ${total}`;
+}
 
-  // Quantity update
+// Toggle Cart Visibility
+function toggleCart() {
+  document.querySelectorAll(".cartButton").forEach((icon) => {
+    icon.addEventListener("click", () => {
+      let cart = document.querySelector(".cart-container");
+      if (cart) cart.classList.toggle("cart-container1");
+    });
+  });
+}
+
+// Update Cart Quantity
+function updateCartQuantity() {
   document.querySelectorAll(".mycart").forEach((Element) => {
     Element.addEventListener("click", (event) => {
       let quantity = event.target.parentNode.children[1];
@@ -124,36 +127,118 @@ const cartFuctions = () => {
       updateGrandTotal();
     });
   });
+}
 
-  // update cartDigits
-  const cartDigits = () => {
-    let carts = document.querySelectorAll(".cartDelete");
-    document.querySelectorAll(".cartButton span").forEach((Element) => {
-      Element.textContent = carts.length;
-    });
-  };
-  cartDigits();
-
-  // Delete cart item
-  document.querySelectorAll(".cartDelete").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      let cartItem = event.target.closest(".cart-item");
-      if (cartItem) {
-        cartItem.remove();
-        updateGrandTotal();
-        cartDigits();
-      }
-    });
+// Update Cart Digits (item count)
+function updateCartDigits() {
+  let carts = document.querySelectorAll(".cartDelete");
+  document.querySelectorAll(".cartButton span").forEach((Element) => {
+    Element.textContent = carts.length;
   });
+}
 
-  // Initial grand total
+// Render cart items from localStorage
+function showCarts() {
+  const cartData = JSON.parse(localStorage.getItem("data")) || [];
+  const cartContainer = document.querySelector("#cartContainer");
+  cartContainer.innerHTML = ""; // clear previous content before re-rendering
+
+  cartData.forEach((product, index) => {
+    const newCart = document.createElement("div");
+    newCart.classList.add("cart-item");
+    newCart.dataset.index = index;
+
+    newCart.innerHTML = `
+      <div class="product-col">
+        <img src="${product.image}" class="product-img" alt="${
+      product.title
+    }" />
+        <strong>${product.title}</strong>
+      </div>
+
+      <div class="qty-col">
+        <div class="d-flex align-items-center">
+          <button class="btn quantity-btn mycart">-</button>
+          <span class="mx-2">${product.quantity}</span>
+          <button class="btn quantity-btn mycart">+</button>
+        </div>
+      </div>
+
+      <div class="total-col"><strong>Rs. ${product.total.toLocaleString()}</strong></div>
+
+      <div class="delete-col">
+        <button class="btn btn-danger btn-sm cartDelete" data-index="${index}">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    `;
+
+    cartContainer.appendChild(newCart);
+  });
+  updateCartQuantity();
+  updateCartDigits();
   updateGrandTotal();
-};
+}
 
-cartFuctions();
+// Add product to localStorage on "Add to Cart"
+document.body.addEventListener("click", function (e) {
+  if (e.target.closest("button")?.textContent.includes("Add to Cart")) {
+    const image = document.querySelector(".detail-img").src;
+    const title = document.querySelector("h2").textContent;
+    const price = parseFloat(
+      document.getElementById("unitPrice").textContent.replace(",", "")
+    );
+    const quantity = parseInt(document.getElementById("quantity").value);
 
-// Count Down Functions
+    let data = JSON.parse(localStorage.getItem("data")) || [];
 
+    const product = {
+      image,
+      title,
+      price,
+      quantity,
+      total: price * quantity,
+    };
+
+    const exists = data.find((item) => item.title === title);
+
+    if (!exists) {
+      data.push(product);
+      localStorage.setItem("data", JSON.stringify(data));
+    }
+
+    showCarts(); // Re-render updated cart
+  }
+});
+
+// Delete cart item
+document.body.addEventListener("click", function (e) {
+  if (e.target.closest(".cartDelete")) {
+    const index = e.target.closest(".cartDelete").dataset.index;
+    let data = JSON.parse(localStorage.getItem("data")) || [];
+
+    data.splice(index, 1); // Remove item by index
+    localStorage.setItem("data", JSON.stringify(data));
+
+    showCarts(); // Refresh cart UI
+  }
+});
+
+// Show cart items on page load
+window.addEventListener("DOMContentLoaded", showCarts);
+
+// Initialize all cart functions
+function initializeCartFunctions() {
+  toggleCart();
+  updateCartQuantity();
+  updateCartDigits();
+  setupCartItemDeletion();
+  updateGrandTotal();
+}
+
+initializeCartFunctions();
+
+// 5. Countdown Timer Functionality
 (() => {
   function updateCountdown(id) {
     const countdownElement = document.getElementById(id);
@@ -190,7 +275,7 @@ cartFuctions();
   setInterval(() => updateCountdown("hotdeals-countdown"), 1000);
 })();
 
-// Just for you more cards function
+// 6. Load More Cards Functionality
 (() => {
   const loadmoreButton = document.querySelector(".loadmore");
   let isVisible = false;
@@ -209,7 +294,7 @@ cartFuctions();
   }
 })();
 
-// product page logic start
+// 7. Product Page Specific Functionality
 document.body.addEventListener("click", (e) => {
   // Increase Qty
   if (e.target.closest("#increase")) {
@@ -275,31 +360,5 @@ document.body.addEventListener("click", (e) => {
     document.getElementById("userComment").value = "";
     document.getElementById("userRating").value = "5";
     alert("Review submitted!");
-  }
-});
-
-// send data to card on button click
-
-document.body.addEventListener("click", function (e) {
-  if (
-    e.target.closest(".btn-danger") &&
-    e.target.closest(".btn-danger").textContent.includes("Add to Cart")
-  ) {
-    // Yahan tum localStorage me data save kar sakte ho
-    // Example:
-    const title = document.querySelector("h2.text-danger").textContent;
-    const price = document.getElementById("unitPrice").textContent;
-    const quantity = document.getElementById("quantity").value;
-
-    const cartItem = {
-      title: title,
-      price: price,
-      quantity: quantity,
-    };
-
-    // Get existing cart from localStorage or empty array
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(cartItem);
-    localStorage.setItem("cart", JSON.stringify(cart));
   }
 });
