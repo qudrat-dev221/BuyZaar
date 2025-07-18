@@ -86,10 +86,10 @@ window.onpopstate = (event) => {
 function updateGrandTotal() {
   let total = 0;
   document.querySelectorAll(".total-col strong").forEach((el) => {
-    total += parseInt(el.textContent.replace("Rs. ", ""));
+    total += parseFloat(el.textContent.replace("Rs. ", "").replace(/,/g, ""));
   });
   let footer = document.querySelector(".cart-footer span");
-  if (footer) footer.textContent = `Rs. ${total}`;
+  if (footer) footer.textContent = `Rs. ${total.toLocaleString()}`;
 }
 
 // Toggle Cart Visibility
@@ -106,24 +106,33 @@ function toggleCart() {
 function updateCartQuantity() {
   document.querySelectorAll(".mycart").forEach((Element) => {
     Element.addEventListener("click", (event) => {
-      let quantity = event.target.parentNode.children[1];
-      let num = parseInt(quantity.textContent);
+      let qtyElement = event.target.closest(".qty-col").querySelector("span");
+      let num = parseInt(qtyElement.textContent);
       let cartItem = event.target.closest(".cart-item");
       let totalEl = cartItem.querySelector(".total-col strong");
-      let currentTotal = parseInt(totalEl.textContent.replace("Rs. ", ""));
-      let unitPrice = Math.round(currentTotal / num);
+      let currentTotal = parseFloat(
+        totalEl.textContent.replace("Rs. ", "").replace(/,/g, "")
+      );
+      let unitPrice = currentTotal / num;
 
       if (event.target.textContent === "+") {
         num++;
-        quantity.textContent = num;
-      } else if (event.target.textContent === "-") {
-        if (num > 1) {
-          num--;
-          quantity.textContent = num;
-        }
+      } else if (event.target.textContent === "-" && num > 1) {
+        num--;
       }
 
-      totalEl.textContent = `Rs. ${unitPrice * num}`;
+      qtyElement.textContent = num;
+      totalEl.textContent = `Rs. ${(unitPrice * num).toLocaleString()}`;
+
+      // Update localStorage
+      let index = cartItem.dataset.index;
+      let data = JSON.parse(localStorage.getItem("data")) || [];
+      if (data[index]) {
+        data[index].quantity = num;
+        data[index].total = unitPrice * num;
+        localStorage.setItem("data", JSON.stringify(data));
+      }
+
       updateGrandTotal();
     });
   });
@@ -232,7 +241,6 @@ function initializeCartFunctions() {
   toggleCart();
   updateCartQuantity();
   updateCartDigits();
-  setupCartItemDeletion();
   updateGrandTotal();
 }
 
