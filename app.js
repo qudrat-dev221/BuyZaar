@@ -897,3 +897,61 @@ const proceedFunction = () => {
 document
   .querySelector(".proceed-btn")
   .addEventListener("click", proceedFunction);
+
+// Search logic
+const searchItems = () => {
+  let allCards = {};
+  const appDiv = document.querySelector("#app");
+  const input = document.querySelector(".searchInput");
+
+  // Load cards.json
+  fetch("./cards/cards.json")
+    .then((res) => res.json())
+    .then((data) => {
+      allCards = data;
+
+      // Input keyup event
+      input.addEventListener("keyup", function () {
+        const keyword = this.value.toLowerCase();
+        appDiv.innerHTML = ""; // clear previous
+
+        const container = document.createElement("div");
+        container.classList.add("container", "p-3");
+
+        const row = document.createElement("div");
+        row.classList.add("row", "g-4");
+
+        let found = false;
+
+        for (let key in allCards) {
+          if (key.toLowerCase().includes(keyword)) {
+            found = true;
+
+            const temp = document.createElement("div");
+            temp.innerHTML = allCards[key];
+
+            // Directly append card (already with col class)
+            row.appendChild(temp.firstElementChild);
+          }
+        }
+
+        if (!found) {
+          appDiv.innerHTML = `<div class="text-center p-5">No products found.</div>`;
+        } else {
+          container.appendChild(row);
+          appDiv.appendChild(container);
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+
+  // Handle click on any card
+  document.body.addEventListener("click", function (e) {
+    const clickedCard = e.target.closest(".routingButton");
+  });
+};
+
+searchItems();
