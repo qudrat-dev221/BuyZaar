@@ -24,16 +24,20 @@ document.body.addEventListener("click", (e) => {
   const button = e.target.closest(".routingButton");
   if (button) {
     const eventName = button.dataset.name;
-    alert(eventName);
+    // alert(eventName);
     if (!eventName) return;
     let html = component[eventName];
     containerDiv.innerHTML = "";
-    containerDiv.innerHTML = html;
+    showLoader();
+    setTimeout(() => {
+      containerDiv.innerHTML = html;
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      hideLoader();
+    }, 300);
 
     history.pushState({ page: eventName }, "", `?page=${eventName}`);
   }
@@ -45,6 +49,14 @@ window.onpopstate = (event) => {
   let page = event.state?.page || urlParams.get("page") || "home";
   let html = component[page] || "<h2>404 - Page Not Found</h2>";
   containerDiv.innerHTML = html;
+};
+
+const showLoader = () => {
+  document.getElementById("loader").classList.remove("d-none");
+};
+
+const hideLoader = () => {
+  document.getElementById("loader").classList.add("d-none");
 };
 
 // 3. Mobile Menu Toggle Functionality
@@ -168,7 +180,7 @@ function showCarts() {
       <div class="qty-col">
         <div class="d-flex align-items-center">
           <button class="btn quantity-btn mycart">-</button>
-          <span class="mx-2">${product.quantity}</span>
+          <span class="mx-2 quntity-cartItem">${product.quantity}</span>
           <button class="btn quantity-btn mycart">+</button>
         </div>
       </div>
@@ -370,3 +382,335 @@ document.body.addEventListener("click", (e) => {
     alert("Review submitted!");
   }
 });
+
+// Buy Now Button LOgic and rendering
+
+document.body.addEventListener("click", function (e) {
+  const clicked = e.target.closest("button");
+
+  if (clicked && clicked.textContent.trim().includes("Buy Now")) {
+    const unitPriceEl = document.getElementById("unitPrice");
+    const quantityEl = document.getElementById("quantity");
+
+    if (unitPriceEl && quantityEl) {
+      // Remove commas and parse price
+      const unitPrice = parseFloat(
+        unitPriceEl.textContent.replace(/,/g, "").trim()
+      );
+
+      const quantity = parseInt(quantityEl.value.trim());
+
+      const totalPrice = unitPrice * quantity;
+      buyPage(totalPrice, quantity);
+    }
+  }
+});
+
+// buyPage Function
+
+const buyPage = (totalPrice, quantity) => {
+  finalPrice = totalPrice + 260;
+  alert(totalPrice);
+  const deliveryInformation = ` <div class="container py-4 py-lg-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card product-card">
+            <div class="card-header card-header-custom">
+              <h2 class="mb-0 section-title ">
+                Delivery Information
+              </h2>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <form id="deliveryForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label form-label-custom"
+                      >Full name</label
+                    >
+                    <input
+                      type="text"
+                      id="fullName"
+                      class="form-control input-custom"
+                      placeholder="John Smith"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label form-label-custom"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      class="form-control input-custom"
+                      placeholder="+92 300 1234567"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label class="form-label form-label-custom"
+                    >Building Address</label
+                  >
+                  <input
+                    type="text"
+                    id="buildingAddress"
+                    class="form-control input-custom"
+                    placeholder="House #123, Floor 2"
+                  />
+                </div>
+
+                <div class="mt-3">
+                  <label class="form-label form-label-custom"
+                    >Street/Landmark</label
+                  >
+                  <input
+                    type="text"
+                    id="streetLandmark"
+                    class="form-control input-custom"
+                    placeholder="Main Boulevard, Near Park"
+                  />
+                </div>
+
+                <div class="row g-3 mt-1">
+                  <div class="col-md-4">
+                    <label class="form-label form-label-custom">Province</label>
+                    <select id="province" class="form-select input-custom">
+                      <option value="" selected>Select Province</option>
+                      <option>Punjab</option>
+                      <option>Sindh</option>
+                      <option>Khyber Pakhtunkhwa</option>
+                      <option>Balochistan</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label form-label-custom">City</label>
+                    <select id="city" class="form-select input-custom">
+                      <option value="" selected>Select City</option>
+                      <option>Lahore</option>
+                      <option>Karachi</option>
+                      <option>Islamabad</option>
+                      <option>Peshawar</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label form-label-custom">Area</label>
+                    <select id="area" class="form-select input-custom">
+                      <option value="" selected>Select Area</option>
+                      <option>Gulberg</option>
+                      <option>DHA</option>
+                      <option>Model Town</option>
+                      <option>Faisal Town</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label class="form-label form-label-custom"
+                    >Complete Address</label
+                  >
+                  <textarea
+                    id="completeAddress"
+                    class="form-control input-custom"
+                    rows="3"
+                    placeholder="House# 123, Street# 10, Sector ABC"
+                  ></textarea>
+                </div>
+
+                <div class="mt-4">
+                  <label class="form-label form-label-custom d-block mb-3"
+                    >Delivery Type</label
+                  >
+                  <div class="d-flex gap-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="deliveryLabel"
+                        id="home"
+                        checked
+                      />
+                      <label class="form-check-label fw-medium" for="home">
+                        <i class="fas fa-home me-2"></i> Home Delivery
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="deliveryLabel"
+                        id="office"
+                      />
+                      <label class="form-check-label fw-medium" for="office">
+                        <i class="fas fa-building me-2"></i> Office Delivery
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <button
+                    type="button"
+                    id="saveInfoBtn"
+                    class="btn btn-danger w-100 btn-custom"
+                  >
+                    <i class="fas fa-save me-2"></i> SAVE INFORMATION
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 product-card">
+          <div class="sticky-top sticky-column" style="top: 30px" id="stick">
+            <div class="card">
+              <div class="card-header card-header-custom">
+                <h3 class="mb-0 section-title ">Order Summary</h3>
+              </div>
+              <div class="card-body p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center summary-item"
+                >
+                  <span class="text-muted"
+                    >Subtotal (<span id="itemCount">${quantity}</span> items)</span
+                  >
+                  <span class="fw-semibold"
+                    >Rs. <span id="subtotal">${totalPrice}</span></span
+                  >
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center summary-item"
+                >
+                  <span class="text-muted">Delivery Fee</span>
+                  <span class="fw-semibold"
+                    >Rs. <span id="deliveryFee">260</span></span
+                  >
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center summary-item mb-2"
+                >
+                  <span class="text-muted">Taxes</span>
+                  <span class="fw-semibold">Rs. <span id="taxes">0</span></span>
+                </div>
+
+                <hr class="my-3" />
+
+                <div
+                  class="d-flex justify-content-between align-items-center summary-total py-2"
+                >
+                  <span class="fw-bold">Total Amount</span>
+                  <span class="fw-bold text-danger"
+                    >Rs. <span id="totalAmount">${finalPrice}</span></span
+                  >
+                </div>
+
+                <div class="mt-4">
+                  <button
+                    id="proceedToBuyBtn"
+                    class="btn btn-danger w-100 btn-custom-lg"
+                  >
+                    PROCEED TO BUY <i class="fas fa-arrow-right ms-2"></i>
+                  </button>
+                </div>
+
+                <div class="mt-4 pt-3">
+                  <h6 class="fw-semibold mb-3">Payment Methods</h6>
+                  <div class="payment-method">
+                    <div class="payment-card">
+                      <i class="fab fa-cc-visa text-primary"></i>
+                    </div>
+                    <div class="payment-card">
+                      <i class="fab fa-cc-mastercard text-danger"></i>
+                    </div>
+                    <div class="payment-card">
+                      <i class="fab fa-cc-paypal"></i>
+                    </div>
+                    <div class="payment-card">
+                      <i class="fas fa-mobile-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card mt-4"
+              style="
+                background: #fafafa;
+                border: 1px solid #eee;
+                border-radius: 14px;
+              "
+            >
+              <div class="card-body p-4">
+                <h6 class="fw-bold mb-3">Need Help?</h6>
+
+                <div class="d-flex align-items-center mb-3">
+                  <div
+                    style="
+                      width: 48px;
+                      height: 48px;
+                      background: #ffe6ea;
+                      border-radius: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-right: 1rem;
+                      color: #ff2e4d;
+                    "
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <div class="small text-muted">Call us 24/7</div>
+                    <div class="fw-semibold">+92 21 111 111 111</div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center">
+                  <div
+                    style="
+                      width: 48px;
+                      height: 48px;
+                      background: #ffe6ea;
+                      border-radius: 12px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-right: 1rem;
+                      color: #ff2e4d;
+                    "
+                  >
+                    <i class="fas fa-comment-dots"></i>
+                  </div>
+                  <div>
+                    <div class="small text-muted">Chat with us</div>
+                    <div class="fw-semibold">Live Chat Support</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  containerDiv.innerHTML = deliveryInformation;
+};
+
+const proceedFunction = () => {
+  let quantity = 0;
+  let total = 0;
+  let totalCartText = document.querySelector("#total").textContent;
+  let totalCart = parseInt(totalCartText.replace(/[^0-9]/g, ""));
+  total = totalCart;
+  const cartItems = document.querySelectorAll(".quntity-cartItem");
+  cartItems.forEach((Element) => {
+    let quantityNumber = parseInt(Element.textContent);
+    quantity += quantityNumber;
+  });
+
+  buyPage(total, quantity);
+};
+
+document
+  .querySelector(".proceed-btn")
+  .addEventListener("click", proceedFunction);

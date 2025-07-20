@@ -155,9 +155,9 @@
         <!-- Footer -->
         <div class="cart-footer">
           <h5 class="m-0">
-            Grand Total : <span class="text-danger">Rs. 2331</span>
+            Grand Total : <span class="text-danger " id="total">Rs. 2331</span>
           </h5>
-          <button class="btn proceed-btn btn-success">PROCEED</button>
+          <button class="btn proceed-btn btn-success" id="proceed-button">PROCEED</button>
         </div>
       </div>
       <!-- cart section end -->
@@ -291,6 +291,15 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Loader -->
+<div id="loader" class="loader-overlay d-none">
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
 <!-- routing Div -->
      <div id="app"></div>
 
