@@ -406,11 +406,165 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
+// show buy page save info
+function showSaveConfirmation() {
+  // Create the popup div
+  const popup = document.createElement("div");
+  popup.textContent = "Your information are saved now";
+  popup.style.position = "fixed";
+  popup.style.top = "50%";
+  popup.style.left = "50%";
+  popup.style.transform = "translate(-50%, -50%)";
+  popup.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  popup.style.color = "white";
+  popup.style.padding = "15px 30px";
+  popup.style.borderRadius = "5px";
+  popup.style.zIndex = "1000";
+  popup.style.transition = "opacity 0.3s";
+
+  // Add the popup to the document
+  document.body.appendChild(popup);
+
+  // Remove the popup after 300ms
+  setTimeout(() => {
+    popup.style.opacity = "0";
+    setTimeout(() => {
+      document.body.removeChild(popup);
+    }, 300);
+  }, 300);
+}
+
+// Function to show thank you message and clear form
+function showThankYouMessage() {
+  // First validate all required fields
+  const requiredInputs = document.querySelectorAll("#deliveryForm [required]");
+  let allFilled = true;
+
+  requiredInputs.forEach((input) => {
+    if (input.type === "radio") {
+      const radioGroup = document.querySelectorAll(
+        `input[name="${input.name}"]`
+      );
+      if (!Array.from(radioGroup).some((radio) => radio.checked)) {
+        allFilled = false;
+        radioGroup.forEach((radio) => {
+          radio.parentElement.style.border = "1px solid red";
+        });
+      }
+    } else if (!input.value.trim()) {
+      allFilled = false;
+      input.style.border = "1px solid red";
+    } else {
+      input.style.border = "";
+      if (input.type === "radio") {
+        input.parentElement.style.border = "";
+      }
+    }
+  });
+
+  if (!allFilled) {
+    // Show error popup if any field is empty
+    const errorDiv = document.createElement("div");
+    errorDiv.innerHTML = `
+      <div style="
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        text-align: center;
+        z-index: 10000;
+        border: 2px solid red;
+      ">
+        <h2 style="color: #ff0000; margin-bottom: 15px;">Please fill all fields</h2>
+        <p style="font-size: 18px;">All fields are required</p>
+      </div>
+    `;
+    document.body.appendChild(errorDiv);
+    setTimeout(() => {
+      document.body.removeChild(errorDiv);
+    }, 3000);
+    return;
+  }
+
+  // Original thank you message code
+  const thankYouDiv = document.createElement("div");
+  thankYouDiv.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      text-align: center;
+      z-index: 10000;
+      animation: fadeIn 0.5s, bounce 0.5s;
+    ">
+      <h2 style="color: #ff0000; margin-bottom: 15px;">Thank you for choosing us</h2>
+      <p style="font-size: 18px;">Your order will be delivered in 2 days</p>
+    </div>
+  `;
+
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translate(-50%, -50%); }
+      40% { transform: translate(-50%, -60%); }
+      60% { transform: translate(-50%, -40%); }
+    }
+  `;
+  document.head.appendChild(style);
+
+  document.body.appendChild(thankYouDiv);
+
+  setTimeout(() => {
+    thankYouDiv.style.animation = "fadeOut 0.5s";
+    setTimeout(() => {
+      document.body.removeChild(thankYouDiv);
+      document.head.removeChild(style);
+    }, 500);
+  }, 4000);
+
+  clearForm();
+}
+
+// Your original clearForm function remains exactly the same
+function clearForm() {
+  const form = document.getElementById("deliveryForm");
+  if (form) {
+    const inputs = form.querySelectorAll(
+      'input[type="text"], input[type="tel"], textarea'
+    );
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+
+    const selects = form.querySelectorAll("select");
+    selects.forEach((select) => {
+      select.selectedIndex = 0;
+    });
+
+    const radios = form.querySelectorAll('input[type="radio"]');
+    if (radios.length > 0) {
+      radios[0].checked = true;
+    }
+  }
+}
+
 // buyPage Function
 
 const buyPage = (totalPrice, quantity) => {
   finalPrice = totalPrice + 260;
-  alert(totalPrice);
   const deliveryInformation = ` <div class="container py-4 py-lg-5">
       <div class="row g-4">
         <div class="col-lg-8">
@@ -432,6 +586,7 @@ const buyPage = (totalPrice, quantity) => {
                       id="fullName"
                       class="form-control input-custom"
                       placeholder="John Smith"
+                      required
                     />
                   </div>
                   <div class="col-md-6">
@@ -443,6 +598,7 @@ const buyPage = (totalPrice, quantity) => {
                       id="phoneNumber"
                       class="form-control input-custom"
                       placeholder="+92 300 1234567"
+                      required
                     />
                   </div>
                 </div>
@@ -456,6 +612,7 @@ const buyPage = (totalPrice, quantity) => {
                     id="buildingAddress"
                     class="form-control input-custom"
                     placeholder="House #123, Floor 2"
+                    required
                   />
                 </div>
 
@@ -468,13 +625,14 @@ const buyPage = (totalPrice, quantity) => {
                     id="streetLandmark"
                     class="form-control input-custom"
                     placeholder="Main Boulevard, Near Park"
+                    required
                   />
                 </div>
 
                 <div class="row g-3 mt-1">
                   <div class="col-md-4">
                     <label class="form-label form-label-custom">Province</label>
-                    <select id="province" class="form-select input-custom">
+                    <select id="province" class="form-select input-custom" required>
                       <option value="" selected>Select Province</option>
                       <option>Punjab</option>
                       <option>Sindh</option>
@@ -484,7 +642,7 @@ const buyPage = (totalPrice, quantity) => {
                   </div>
                   <div class="col-md-4">
                     <label class="form-label form-label-custom">City</label>
-                    <select id="city" class="form-select input-custom">
+                    <select id="city" class="form-select input-custom" required>
                       <option value="" selected>Select City</option>
                       <option>Lahore</option>
                       <option>Karachi</option>
@@ -494,7 +652,7 @@ const buyPage = (totalPrice, quantity) => {
                   </div>
                   <div class="col-md-4">
                     <label class="form-label form-label-custom">Area</label>
-                    <select id="area" class="form-select input-custom">
+                    <select id="area" class="form-select input-custom" required>
                       <option value="" selected>Select Area</option>
                       <option>Gulberg</option>
                       <option>DHA</option>
@@ -513,6 +671,7 @@ const buyPage = (totalPrice, quantity) => {
                     class="form-control input-custom"
                     rows="3"
                     placeholder="House# 123, Street# 10, Sector ABC"
+                    required
                   ></textarea>
                 </div>
 
@@ -528,6 +687,7 @@ const buyPage = (totalPrice, quantity) => {
                         name="deliveryLabel"
                         id="home"
                         checked
+                        required
                       />
                       <label class="form-check-label fw-medium" for="home">
                         <i class="fas fa-home me-2"></i> Home Delivery
@@ -539,6 +699,7 @@ const buyPage = (totalPrice, quantity) => {
                         type="radio"
                         name="deliveryLabel"
                         id="office"
+                        required
                       />
                       <label class="form-check-label fw-medium" for="office">
                         <i class="fas fa-building me-2"></i> Office Delivery
@@ -693,7 +854,29 @@ const buyPage = (totalPrice, quantity) => {
         </div>
       </div>
     </div>`;
+
   containerDiv.innerHTML = deliveryInformation;
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
+  let buttonSaveINfo = document.getElementById("saveInfoBtn");
+  buttonSaveINfo.addEventListener("click", () => {
+    showSaveConfirmation();
+  });
+
+  document
+    .getElementById("proceedToBuyBtn")
+    .addEventListener("click", showThankYouMessage);
+
+  //  toggle cart
+  let button = document.querySelector(".cart-container");
+  if (button) {
+    let buttonONe = document.querySelector(".cart-container");
+    buttonONe.classList.remove("cart-container1");
+    buttonONe.classList.add("cart-container");
+  }
 };
 
 const proceedFunction = () => {
