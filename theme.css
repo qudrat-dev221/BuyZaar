@@ -947,7 +947,32 @@ textarea:focus {
   transition: all 0.5s ease;
 }
 
-.chatbot-toggle:hover {
-  color: white;
-  background-color: rgba(220, 53, 69, 1);
+#login-form input:focus,
+#register-form input:focus,
+#login-form select:focus,
+#register-form select:focus {
+  box-shadow: none !important;
+  border-color: rgba(220, 53, 69, 0.8) !important;
+  transition: border-color 0.3s ease;
+  border: 2px solid rgba(220, 53, 69, 0.8) !important;
+}
+
+#login-form input:hover,
+#register-form input:hover,
+#login-form select:hover,
+#register-form select:hover {
+  border-color: rgba(220, 53, 69, 0.5) !important;
+  transition: border-color 0.3s ease;
+}
+
+#login-form input,
+#register-form input,
+#login-form select,
+#register-form select {
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  transition: border-color 0.3s ease;
+}
+
+.input-group-text {
+  background-color: white !important;
 }
