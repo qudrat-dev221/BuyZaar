@@ -606,3 +606,305 @@ textarea:focus {
 #stick {
   z-index: -1;
 }
+
+/* Global fix for disappearing borders on focus */
+.form-control:focus,
+.form-select:focus,
+.qty-box input:focus,
+textarea:focus {
+  border: 1px solid #dc3545 !important; /* Red border */
+}
+
+/* Specific fix for outline-danger class */
+.outline-danger:focus {
+  border: 2px solid #dc3545 !important;
+}
+
+/* chatbot */
+
+/* chatbot */
+.chat-popup {
+  width: 300px;
+  height: 85vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: fixed;
+  bottom: 1vh;
+  left: 1vw;
+  z-index: 99;
+  background-color: white;
+}
+
+.chat-popup:hover {
+  transform: translateY(-5px);
+}
+
+.bot-header {
+  display: flex;
+  padding: 8px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(220, 53, 69, 1);
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot-header:hover {
+  background-color: rgba(200, 35, 51, 1);
+}
+
+.bot-logo {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.bot-logo:hover {
+  transform: scale(1.1);
+}
+
+.myimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: white;
+  transition: opacity 0.3s ease;
+}
+
+.myimage:hover {
+  opacity: 0.9;
+}
+
+.bot-name {
+  flex-grow: 2;
+  font-size: 17px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.bot-name:hover {
+  color: #f0f0f0;
+}
+
+.chat-hide {
+  height: 30px;
+  width: 30px;
+
+  text-align: center;
+  align-content: center;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.chat-hide:hover {
+  background-color: white;
+  color: rgba(220, 53, 69, 1);
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  padding: 10px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.bot-message {
+  width: 70%;
+  background-color: rgba(220, 53, 69, 1);
+  padding: 10px 10px;
+  color: white;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease forwards 0.3s;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.bot-message:hover {
+  background-color: rgba(200, 35, 51, 1);
+  transform: translateY(5px);
+}
+
+.user-message {
+  width: 70%;
+  background-color: aliceblue;
+  padding: 10px 10px;
+  align-self: flex-end;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.3s ease forwards 0.6s;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.user-message:hover {
+  background-color: #e0e8f0;
+  transform: translateY(5px);
+}
+
+.bot-footer {
+  align-self: flex-end;
+  width: 100%;
+}
+
+.bot-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bot-form textarea {
+  flex-grow: 2;
+  transition: all 0.3s ease;
+}
+
+.bot-form textarea:focus {
+  box-shadow: inset 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+.bot-footer .controls {
+  display: flex;
+  border-bottom-right-radius: 10px;
+  gap: 5px;
+  background-color: rgba(220, 53, 69, 1);
+  align-items: center;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.bot-footer .controls:hover {
+  background-color: rgba(200, 35, 51, 1);
+}
+
+.bot-footer .controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: rgba(220, 53, 69, 1);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bot-footer .controls button:hover {
+  background-color: white;
+  color: rgba(220, 53, 69, 1);
+  transform: scale(1.1);
+}
+
+.bot-footer form textarea {
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 10px;
+  padding: 5px 10px;
+  resize: none;
+  max-height: 40px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+.chat-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Quick replies and products */
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quick-reply {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-reply:hover {
+  background-color: #ddd;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.product-detail-btn {
+  background-color: rgba(220, 53, 69, 1);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.product-detail-btn:hover {
+  background-color: rgba(200, 35, 51, 1);
+}
+
+.message-time {
+  font-size: 0.7em;
+  color: #666;
+  text-align: right;
+  margin-top: 5px;
+}

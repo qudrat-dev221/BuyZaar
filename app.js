@@ -1,8 +1,9 @@
 // Global variables
-let component = {};
-let containerDiv = document.querySelector("#app");
+let component = {}; // Stores all page components loaded from components.json
+let containerDiv = document.querySelector("#app"); // Main container where content is rendered
 
 // 1. Initial Page Load Functionality
+// Load components from JSON file and render initial page based on URL
 fetch("components.json")
   .then((res) => res.json())
   .then((res) => {
@@ -10,8 +11,8 @@ fetch("components.json")
 
     // Initial URL load (VERY IMPORTANT)
     let urlParams = new URLSearchParams(window.location.search);
-    let page = urlParams.get("page") || "home";
-    containerDiv.innerHTML = component[page] || "<h2>404 - Page Not Found</h2>";
+    let page = urlParams.get("page") || "home"; // Get page from URL or default to "home"
+    containerDiv.innerHTML = component[page] || "<h2>404 - Page Not Found</h2>"; // Render page or 404
   })
   .catch((err) => {
     containerDiv.innerHTML = "<h2>Something went wrong while loading!</h2>";
@@ -28,17 +29,18 @@ document.body.addEventListener("click", (e) => {
     if (!eventName) return;
     let html = component[eventName];
     containerDiv.innerHTML = "";
-    showLoader();
+    showLoader(); // Show loading spinner
     setTimeout(() => {
-      containerDiv.innerHTML = html;
+      containerDiv.innerHTML = html; // Render new page after delay
 
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-      hideLoader();
+      hideLoader(); // Hide loading spinner
     }, 300);
 
+    // Update browser history
     history.pushState({ page: eventName }, "", `?page=${eventName}`);
   }
 });
@@ -51,6 +53,7 @@ window.onpopstate = (event) => {
   containerDiv.innerHTML = html;
 };
 
+// Loading spinner functions
 const showLoader = () => {
   document.getElementById("loader").classList.remove("d-none");
 };
@@ -60,6 +63,7 @@ const hideLoader = () => {
 };
 
 // 3. Mobile Menu Toggle Functionality
+// Self-executing function to handle mobile menu
 (() => {
   let isOpen = false;
   let toggleButton = document.querySelector("#toggleMobile");
@@ -70,7 +74,7 @@ const hideLoader = () => {
     toggleButton.addEventListener("click", () => {
       isOpen = !isOpen;
 
-      // Toggle icon
+      // Toggle icon between hamburger and X
       toggleButton.innerHTML = isOpen
         ? '<i class="fa-solid fa-xmark text-danger"></i>'
         : '<i class="fa-solid fa-bars text-danger"></i>';
@@ -94,7 +98,7 @@ const hideLoader = () => {
 
 // 4. Cart Functionality
 
-// Grand Total Function
+// Calculate and update grand total of all items in cart
 function updateGrandTotal() {
   let total = 0;
   document.querySelectorAll(".total-col strong").forEach((el) => {
@@ -114,7 +118,7 @@ function toggleCart() {
   });
 }
 
-// Update Cart Quantity
+// Update Cart Quantity (+/- buttons)
 function updateCartQuantity() {
   document.querySelectorAll(".mycart").forEach((Element) => {
     Element.addEventListener("click", (event) => {
@@ -150,7 +154,7 @@ function updateCartQuantity() {
   });
 }
 
-// Update Cart Digits (item count)
+// Update Cart Digits (item count in cart icon)
 function updateCartDigits() {
   let carts = document.querySelectorAll(".cartDelete");
   document.querySelectorAll(".cartButton span").forEach((Element) => {
@@ -201,7 +205,7 @@ function showCarts() {
   updateGrandTotal();
 }
 
-// Add product to localStorage on "Add to Cart"
+// Add product to localStorage on "Add to Cart" button click
 document.body.addEventListener("click", function (e) {
   if (e.target.closest("button")?.textContent.includes("Add to Cart")) {
     const image = document.querySelector(".detail-img").src;
@@ -226,6 +230,33 @@ document.body.addEventListener("click", function (e) {
     if (!exists) {
       data.push(product);
       localStorage.setItem("data", JSON.stringify(data));
+
+      // Create success popup
+      const popup = document.createElement("div");
+      popup.textContent = "Product added to cart successfully!";
+      popup.style.position = "fixed";
+      popup.style.top = "50%";
+      popup.style.left = "50%";
+      popup.style.transform = "translate(-50%, -50%)";
+      popup.style.backgroundColor = "#4CAF50"; // Green background
+      popup.style.color = "white";
+      popup.style.padding = "15px 30px";
+      popup.style.borderRadius = "5px";
+      popup.style.zIndex = "1000";
+      popup.style.transition = "opacity 0.3s";
+      popup.style.fontWeight = "bold";
+      popup.style.fontSize = "16px";
+      popup.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+
+      document.body.appendChild(popup);
+
+      // Remove popup after 1.5 seconds
+      setTimeout(() => {
+        popup.style.opacity = "0";
+        setTimeout(() => {
+          document.body.removeChild(popup);
+        }, 300);
+      }, 3000);
     }
 
     showCarts(); // Re-render updated cart
@@ -259,6 +290,7 @@ function initializeCartFunctions() {
 initializeCartFunctions();
 
 // 5. Countdown Timer Functionality
+// Handles countdown timers on the page
 (() => {
   function updateCountdown(id) {
     const countdownElement = document.getElementById(id);
@@ -291,11 +323,13 @@ initializeCartFunctions();
       .padStart(2, "0")}`;
   }
 
+  // Update countdowns every second
   setInterval(() => updateCountdown("countdown"), 1000);
   setInterval(() => updateCountdown("hotdeals-countdown"), 1000);
 })();
 
 // 6. Load More Cards Functionality
+// Toggle visibility of additional product cards
 (() => {
   const loadmoreButton = document.querySelector(".loadmore");
   let isVisible = false;
@@ -350,7 +384,7 @@ document.body.addEventListener("click", (e) => {
     const comment = document.getElementById("userComment")?.value.trim();
     const rating = document.getElementById("userRating")?.value;
 
-    if (!name || !comment) return alert("Name aur comment likho!");
+    if (!name || !comment) return alert("Name & Comment are Reuired!");
 
     const letter = name[0].toUpperCase();
     const colors = ["bg-danger", "bg-success", "bg-warning", "bg-info"];
@@ -376,15 +410,14 @@ document.body.addEventListener("click", (e) => {
 
     document.getElementById("reviewsList")?.prepend(div);
 
+    // Clear form fields
     document.getElementById("reviewerName").value = "";
     document.getElementById("userComment").value = "";
     document.getElementById("userRating").value = "5";
-    alert("Review submitted!");
   }
 });
 
-// Buy Now Button LOgic and rendering
-
+// Buy Now Button Logic and rendering
 document.body.addEventListener("click", function (e) {
   const clicked = e.target.closest("button");
 
@@ -406,7 +439,7 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
-// show buy page save info
+// Show save confirmation popup
 function showSaveConfirmation() {
   // Create the popup div
   const popup = document.createElement("div");
@@ -538,7 +571,7 @@ function showThankYouMessage() {
   clearForm();
 }
 
-// Your original clearForm function remains exactly the same
+// Clear form fields
 function clearForm() {
   const form = document.getElementById("deliveryForm");
   if (form) {
@@ -561,8 +594,7 @@ function clearForm() {
   }
 }
 
-// buyPage Function
-
+// buyPage Function - Renders the checkout page
 const buyPage = (totalPrice, quantity) => {
   finalPrice = totalPrice + 260;
   const deliveryInformation = ` <div class="container py-4 py-lg-5">
@@ -879,6 +911,7 @@ const buyPage = (totalPrice, quantity) => {
   }
 };
 
+// Proceed to checkout from cart page
 const proceedFunction = () => {
   let quantity = 0;
   let total = 0;
@@ -955,3 +988,88 @@ const searchItems = () => {
 };
 
 searchItems();
+
+//chat bot
+
+const runnBot = () => {
+  let botData = {};
+
+  const chatBody = document.querySelector(".chat-body");
+  const chatForm = document.querySelector(".bot-form");
+  const userInput = document.getElementById("user-input");
+
+  // Load bot responses
+  fetch("./cards/bot.json")
+    .then((response) => response.json())
+    .then((data) => {
+      botData = data;
+
+      // Show welcome message after data is fetched
+      const messageDiv = document.createElement("div");
+      messageDiv.className = "bot-message";
+      messageDiv.textContent = botData["hi"] || "Hi there. How can I help you?";
+      chatBody.appendChild(messageDiv);
+      scrollToBottom();
+    })
+    .catch((error) => {
+      console.log("data Not Loaded " + error);
+    });
+
+  // On form submit or Enter key
+  chatForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    displayUsermessage();
+  });
+
+  userInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form default submission
+      displayUsermessage();
+    }
+  });
+
+  const displayUsermessage = () => {
+    const inputValue = userInput.value.trim();
+    if (!inputValue) return;
+
+    const messageDiv = document.createElement("div");
+    messageDiv.className = "user-message";
+    messageDiv.textContent = inputValue;
+    chatBody.appendChild(messageDiv);
+
+    setTimeout(() => {
+      botDisplayMessage(inputValue);
+    }, 800);
+
+    userInput.value = ""; // Clear input
+    scrollToBottom();
+  };
+
+  const botDisplayMessage = (message) => {
+    const lowerMessage = message.toLowerCase();
+
+    // Partial match
+    const matchedKey = Object.keys(botData).find((key) =>
+      lowerMessage.includes(key.toLowerCase())
+    );
+
+    const botReply = document.createElement("div");
+    botReply.className = "bot-message";
+
+    if (matchedKey) {
+      botReply.textContent = botData[matchedKey];
+      console.log("✅ Matched keyword:", matchedKey);
+    } else {
+      botReply.textContent = "❓ Sorry, I don't understand.";
+    }
+
+    chatBody.appendChild(botReply);
+    scrollToBottom();
+  };
+
+  const scrollToBottom = () => {
+    chatBody.scrollTop = chatBody.scrollHeight;
+  };
+};
+
+runnBot();
