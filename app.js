@@ -1073,3 +1073,25 @@ const runnBot = () => {
 };
 
 runnBot();
+
+// bot HIde Show
+
+document.querySelector(".chatbot-toggle").addEventListener("click", () => {
+  let bot = document.querySelector(".chat-popup");
+  bot.classList.remove("chat-popup");
+  bot.classList.add("chat-popup1");
+  document.querySelector(".chatbot-toggle").style.display = "none";
+  // alert("hi");
+});
+
+document.querySelector(".chat-hide").addEventListener("click", () => {
+  let bot = document.querySelector(".chat-popup1");
+  bot.classList.remove("chat-popup1");
+  bot.classList.add("chat-popup");
+  document.querySelector(".chatbot-toggle").style.display = "block";
+
+  const chatBody = document.querySelector(".chat-body");
+  chatBody.innerHTML = "";
+
+  runnBot();
+});

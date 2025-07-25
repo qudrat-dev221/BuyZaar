@@ -178,4 +178,42 @@
   .slidemenu1.slidemenu2 {
     transform: translateX(0);
   }
+
+  .chatbot-toggle {
+    width: 115px;
+    position: fixed;
+    right: 20px;
+    border: 2px solid rgba(220, 53, 69, 1);
+    bottom: 15vh;
+    padding: 10px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(220, 53, 69, 1);
+    background-color: white;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    font-size: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s ease;
+  }
+
+  .chat-popup1 {
+    width: 93vw;
+    height: 80vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    position: fixed;
+    bottom: 11vh;
+    right: 1.2vw;
+    z-index: 99;
+    background-color: white;
+  }
 }

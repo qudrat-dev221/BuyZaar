@@ -624,6 +624,22 @@ textarea:focus {
 
 /* chatbot */
 .chat-popup {
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  z-index: 99;
+  background-color: white;
+}
+
+.chat-popup1 {
   width: 300px;
   height: 85vh;
   border-radius: 10px;
@@ -634,7 +650,7 @@ textarea:focus {
   transition: transform 0.3s ease;
   position: fixed;
   bottom: 1vh;
-  left: 1vw;
+  right: 1.2vw;
   z-index: 99;
   background-color: white;
 }
@@ -907,4 +923,31 @@ textarea:focus {
   color: #666;
   text-align: right;
   margin-top: 5px;
+}
+
+.chatbot-toggle {
+  width: 115px;
+  position: fixed;
+  right: 30px;
+  border: 2px solid rgba(220, 53, 69, 1);
+  bottom: 30px;
+  padding: 10px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(220, 53, 69, 1);
+  background-color: white;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-size: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s ease;
+}
+
+.chatbot-toggle:hover {
+  color: white;
+  background-color: rgba(220, 53, 69, 1);
 }
