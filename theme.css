@@ -704,6 +704,7 @@ textarea:focus {
 .bot-name {
   flex-grow: 2;
   font-size: 17px;
+  font-weight: 600;
   color: white;
   transition: color 0.3s ease;
 }

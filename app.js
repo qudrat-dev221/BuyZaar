@@ -216,7 +216,6 @@ document.body.addEventListener("click", function (e) {
     const quantity = parseInt(document.getElementById("quantity").value);
 
     let data = JSON.parse(localStorage.getItem("data")) || [];
-
     const product = {
       image,
       title,
@@ -935,7 +934,7 @@ document
 const searchItems = () => {
   let allCards = {};
   const appDiv = document.querySelector("#app");
-  const input = document.querySelector(".searchInput");
+  const input = document.querySelectorAll(".searchInput");
 
   // Load cards.json
   fetch("./cards/cards.json")
@@ -943,41 +942,43 @@ const searchItems = () => {
     .then((data) => {
       allCards = data;
 
-      // Input keyup event
-      input.addEventListener("keyup", function () {
-        const keyword = this.value.toLowerCase();
-        appDiv.innerHTML = ""; // clear previous
+      input.forEach((element) => {
+        // Input keyup event
+        element.addEventListener("keyup", function () {
+          const keyword = this.value.toLowerCase();
+          appDiv.innerHTML = ""; // clear previous
 
-        const container = document.createElement("div");
-        container.classList.add("container", "p-3");
+          const container = document.createElement("div");
+          container.classList.add("container", "p-3");
 
-        const row = document.createElement("div");
-        row.classList.add("row", "g-4");
+          const row = document.createElement("div");
+          row.classList.add("row", "g-4");
 
-        let found = false;
+          let found = false;
 
-        for (let key in allCards) {
-          if (key.toLowerCase().includes(keyword)) {
-            found = true;
+          for (let key in allCards) {
+            if (key.toLowerCase().includes(keyword)) {
+              found = true;
 
-            const temp = document.createElement("div");
-            temp.innerHTML = allCards[key];
+              const temp = document.createElement("div");
+              temp.innerHTML = allCards[key];
 
-            // Directly append card (already with col class)
-            row.appendChild(temp.firstElementChild);
+              // Directly append card (already with col class)
+              row.appendChild(temp.firstElementChild);
+            }
           }
-        }
 
-        if (!found) {
-          appDiv.innerHTML = `<div class="text-center p-5">No products found.</div>`;
-        } else {
-          container.appendChild(row);
-          appDiv.appendChild(container);
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        }
+          if (!found) {
+            appDiv.innerHTML = `<div class="text-center p-5">No products found.</div>`;
+          } else {
+            container.appendChild(row);
+            appDiv.appendChild(container);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }
+        });
       });
     });
 
@@ -1058,7 +1059,6 @@ const runnBot = () => {
 
     if (matchedKey) {
       botReply.textContent = botData[matchedKey];
-      console.log("✅ Matched keyword:", matchedKey);
     } else {
       botReply.textContent = "❓ Sorry, I don't understand.";
     }
